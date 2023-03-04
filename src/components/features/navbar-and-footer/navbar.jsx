@@ -17,7 +17,7 @@ const Navbar = () => {
     themeSwitch
   } = useAppContext();
 
-  const [changeIcon, setChangeIcon] = useState(false);
+  const [changeIcon, setChangeIcon] = useState(true);
 
   function handleNavbarMinimized() {
       setNavCollapsed(true);

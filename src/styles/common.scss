@@ -1,0 +1,78 @@
+html {
+    font-family: tachyon, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition-timing-function: 0.6s ease-in-out;
+    transition: 0.8s ease-in-out;
+    scroll-behavior: smooth;
+    background-color: var(--color02);
+    
+    body {
+        margin: 0px;
+        transition-timing-function: ease-in-out;
+        transition: 0.8s ease-in-out;
+
+        .LightMode {
+            .page-elements-wrapper {
+                @include section;
+
+                h1 {
+                    @include section-header;
+                    margin: 0px 0px 20px 0px;
+                }
+            }
+
+            transition-timing-function: ease-in-out;
+            transition: 0.8s ease-in-out;
+        }
+
+        .DarkMode {
+            .page-elements-wrapper {
+                @include darksection;
+
+                h1 {
+                    @include dark-section-header;
+                    margin: 0px 0px 20px 0px;
+                    color: var(--color11);
+                }
+            }
+            
+            transition-timing-function: ease-in-out;
+            transition: 0.8s ease-in-out;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-family: ethnocentric, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h2 {
+            font-family: ethnocentric, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+
+body::-webkit-scrollbar {
+    max-width: 0.6em;
+    max-height: 0.6em;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    max-width: 0.6em;
+    max-height: 0.6em;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 4px 2px var(--blackShadowInset);
+    background-color: var(--commonColor02);
+}

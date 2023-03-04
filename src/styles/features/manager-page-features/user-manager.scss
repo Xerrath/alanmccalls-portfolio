@@ -1,0 +1,623 @@
+// --------------------------------
+// Light Theme
+// --------------------------------
+
+.LightMode {
+  .users-manager-wrapper {
+    @include flex-config($flex-direction: row, $justify-content: space-between);
+    width: 100%;
+    margin: 10px 10px 0px 10px;
+    height: 580px;
+
+    .left-column {
+      width: 40%;
+
+      .users-display-wrapper {
+        width: 100%;
+
+        input {
+            border-radius: 10px;
+            padding: 6px;
+            width: 90%;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            text-align: center;
+            align-self: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            background-color: var(--color01);
+            border-bottom: 3px solid var(--color04);
+            border-top: 3px solid var(--color04);
+            border-right: 1px solid var(--color04);
+            border-left: 1px solid var(--color04);
+            box-shadow: 0px 0px 6px 3px var(--lightBlueGlow);
+        }
+
+        .current-users-wrapper {
+          @include flex-config(
+            $flex-direction: column,
+            $justify-content: center
+          );
+          align-items: center;
+          width: 100%;
+
+          .button-handles-wrapper {
+            @include flex-config(
+              $flex-direction: row,
+              $justify-content: space-evenly
+            );
+            width: 100%;
+            margin-bottom: 10px;
+
+            .slider {
+              @include flex-config(
+                $justify-content: space-between,
+                $flex-direction: row
+              );
+              user-select: none;
+              cursor: pointer;
+              font-size: 1.2rem;
+              padding: 2px;
+              min-height: 20px;
+              background: radial-gradient(
+                var(--sliderbuttoncolor1) 10%,
+                var(--sliderbuttoncolor2) 50%,
+                var(--sliderbuttoncolor3)
+              );
+              transition: 0.8s ease-in-out;
+              min-width: 40%;
+              place-content: center;
+              border-radius: 20px;
+              border-top: 2px solid var(--color01);
+              border-bottom: 2px solid var(--color01);
+              border-right: 1px solid var(--color01);
+              border-left: 1px solid var(--color01);
+
+              &:hover {
+                border-top: 2px solid var(--color02);
+                border-bottom: 2px solid var(--color02);
+                border-right: 1px solid var(--color02);
+                border-left: 1px solid var(--color02);
+                user-select: none;
+                color: var(--color02);
+                background: radial-gradient(
+                  var(--color01rgt),
+                  var(--color02rgt)
+                );
+                animation: lightmodeButtonShadower 8s ease-in-out infinite;
+              }
+            }
+          }
+
+          .current-users-hider-wrapper {
+            overflow-y: hidden;
+            height: 400px;
+            border-top: 3px solid var(--color05);
+            border-bottom: 3px solid var(--color05);
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-radius: 24px;
+            width: 90%;
+            padding: 8px;
+            margin-top: 10px;
+
+            .current-users {
+              @include flex-config(
+                $flex-direction: column-reverse,
+                $justify-content: top
+              );
+              align-items: center;
+              transition: 0.8s ease-in-out;
+
+              .user-wrapper {
+                width: 90%;
+                border-top: 2px solid var(--color04);
+                border-bottom: 2px solid var(--color04);
+                border-right: 1px solid var(--color04);
+                border-left: 1px solid var(--color04);
+                border-radius: 10px;
+                margin: 8px;
+                box-shadow: 0px 0px 4px 2px var(--lightBlueGlow);
+                height: 120px;
+                @include flex-config(
+                  $flex-direction: column,
+                  $justify-content: space-between
+                );
+                align-items: center;
+                padding: 8px;
+                background: linear-gradient(
+                  76deg,
+                  var(--color01) 84%,
+                  var(--color02) 99.5%
+                );
+
+                .user-name {
+                  color: var(--color04);
+                  border-bottom: 2px solid var(--color05);
+                  border-right: 1px solid transparent;
+                  border-left: 1px solid transparent;
+                  width: 90%;
+                  font-size: 1.2rem;
+                  border-radius: 12px;
+                }
+
+                .user-email {
+                  color: var(--color02);
+                  font-size: 0.8rem;
+                }
+
+                .user-options {
+                  @include flex-config(
+                    $flex-direction: row,
+                    $justify-content: space-between
+                  );
+                  align-items: center;
+                  width: 100%;
+                  font-size: 0.7rem;
+                  color: var(--color02);
+
+                  .user-edit {
+                    @include small-off-width-borders-transparent;
+                    border-radius: 24px;
+                    padding: 4px 10px 4px 10px;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: 0.6s ease-in-out;
+
+                    &:hover {
+                      border-top: 2px solid var(--color05);
+                      border-bottom: 2px solid var(--color05);
+                      color: var(--color04);
+                    }
+                  }
+
+                  .user-resend {
+                    @include small-off-width-borders-transparent;
+                    border-radius: 24px;
+                    padding: 4px 10px 4px 10px;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: 0.6s ease-in-out;
+
+                    &:hover {
+                      border-top: 2px solid var(--color05);
+                      border-bottom: 2px solid var(--color05);
+                      color: var(--color04);
+                    }
+                  }
+
+                  .user-delete {
+                    @include small-off-width-borders-transparent;
+                    border-radius: 24px;
+                    padding: 4px 10px 4px 10px;
+                    user-select: none;
+                    cursor: pointer;
+                    transition: 0.6s ease-in-out;
+
+                    &:hover {
+                      border-top: 2px solid var(--color05);
+                      border-bottom: 2px solid var(--color05);
+                      color: var(--color04);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-column {
+      width: 54%;
+      align-self: center;
+
+      .create-user, .edit-user {
+        @include flex-config(
+          $flex-direction: column,
+          $justify-content: space-evenly
+        );
+        align-items: center;
+
+        input {
+          border-radius: 10px;
+          padding: 6px;
+          width: 90%;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          color: var(--color02);
+          text-align: center;
+          align-self: center;
+          margin-top: 16px;
+          margin-bottom: 16px;
+          background-color: var(--color01);
+          border-bottom: 3px solid var(--color04);
+          border-top: 3px solid var(--color04);
+          border-right: 1px solid var(--color04);
+          border-left: 1px solid var(--color04);
+          box-shadow: 0px 0px 8px 4px var(--lightBlueGlow);
+        }
+
+        .confirm-btn {
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--color05);
+          cursor: pointer;
+          user-select: none;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          padding: 4px 10px 4px 10px;
+          background-color: transparent;
+          width: 45%;
+          align-self: center;
+          margin: 20px 10px 20px 10px;
+
+          &:hover {
+            border-top: 2px solid var(--color05);
+            border-bottom: 2px solid var(--color05);
+            color: var(--color04);
+          }
+        }
+
+        .cancel-btn {
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--color05);
+          cursor: pointer;
+          user-select: none;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          padding: 4px 10px 4px 10px;
+          background-color: transparent;
+          width: 45%;
+          align-self: center;
+          margin: 20px 10px 20px 10px;
+
+          &:hover {
+            border-top: 2px solid var(--color05);
+            border-bottom: 2px solid var(--color05);
+            color: var(--color04);
+          }
+        }
+
+        .button-wrapper {
+          @include flex-config($flex-direction:row, $justify-content: space-between);
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Theme
+// --------------------------------
+
+.DarkMode {
+    .users-manager-wrapper {
+      @include flex-config($flex-direction: row, $justify-content: space-between);
+      width: 100%;
+      margin: 10px 10px 0px 10px;
+      height: 580px;
+  
+      .left-column {
+        width: 40%;
+  
+        .users-display-wrapper {
+          width: 100%;
+  
+          input {
+              border-radius: 10px;
+              padding: 6px;
+              width: 90%;
+              font-family: tachyon, sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              font-size: 1rem;
+              color: var(--color02);
+              text-align: center;
+              align-self: center;
+              margin-top: 10px;
+              margin-bottom: 20px;
+              background-color: var(--color11);
+              border-bottom: 3px solid var(--color16);
+              border-top: 3px solid var(--color16);
+              border-right: 1px solid var(--color16);
+              border-left: 1px solid var(--color16);
+              box-shadow: 0px 0px 6px 3px var(--blueGlow);
+          }
+  
+          .current-users-wrapper {
+            @include flex-config(
+              $flex-direction: column,
+              $justify-content: center
+            );
+            align-items: center;
+            width: 100%;
+  
+            .button-handles-wrapper {
+              @include flex-config(
+                $flex-direction: row,
+                $justify-content: space-evenly
+              );
+              width: 100%;
+              margin-bottom: 10px;
+  
+              .slider {
+                @include flex-config(
+                  $justify-content: space-between,
+                  $flex-direction: row
+                );
+                user-select: none;
+                cursor: pointer;
+                font-size: 1.2rem;
+                padding: 2px;
+                min-height: 20px;
+                background: radial-gradient(
+                  var(--sliderbuttoncolor1) 10%,
+                  var(--sliderbuttoncolor2) 50%,
+                  var(--sliderbuttoncolor3)
+                );
+                transition: 0.8s ease-in-out;
+                min-width: 40%;
+                place-content: center;
+                border-radius: 20px;
+                border-top: 2px solid var(--color01);
+                border-bottom: 2px solid var(--color01);
+                border-right: 1px solid var(--color01);
+                border-left: 1px solid var(--color01);
+  
+                &:hover {
+                  border-top: 2px solid var(--color02);
+                  border-bottom: 2px solid var(--color02);
+                  border-right: 1px solid var(--color02);
+                  border-left: 1px solid var(--color02);
+                  user-select: none;
+                  color: var(--color02);
+                  background: radial-gradient(var(--green01), var(--green));
+                  animation: darkmodeButtonShadower 8s ease-in-out infinite;
+                }
+              }
+            }
+  
+            .current-users-hider-wrapper {
+              overflow-y: hidden;
+              height: 400px;
+              border-top: 3px solid var(--color12);
+              border-bottom: 3px solid var(--color12);
+              border-right: 1px solid transparent;
+              border-left: 1px solid transparent;
+              border-radius: 24px;
+              width: 90%;
+              padding: 8px;
+              margin-top: 10px;
+  
+              .current-users {
+                @include flex-config(
+                  $flex-direction: column-reverse,
+                  $justify-content: top
+                );
+                align-items: center;
+                transition: 0.8s ease-in-out;
+  
+                .user-wrapper {
+                  width: 90%;
+                  border-top: 2px solid var(--color16);
+                  border-bottom: 2px solid var(--color16);
+                  border-right: 1px solid var(--color16);
+                  border-left: 1px solid var(--color16);
+                  border-radius: 10px;
+                  margin: 8px;
+                  box-shadow: 0px 0px 4px 2px var(--blueGlow);
+                  height: 120px;
+                  @include flex-config(
+                    $flex-direction: column,
+                    $justify-content: space-between
+                  );
+                  align-items: center;
+                  padding: 8px;
+                  background: linear-gradient(75deg, var(--color02), var(--color02), var(--color02), var(--color06), var(--color06));
+  
+                  .user-name {
+                    color: var(--color16);
+                    border-bottom: 2px solid var(--color13);
+                    border-right: 1px solid transparent;
+                    border-left: 1px solid transparent;
+                    width: 90%;
+                    font-size: 1.2rem;
+                    border-radius: 12px;
+                  }
+  
+                  .user-email {
+                    color: var(--color11);
+                    font-size: 0.8rem;
+                  }
+  
+                  .user-options {
+                    @include flex-config(
+                      $flex-direction: row,
+                      $justify-content: space-between
+                    );
+                    align-items: center;
+                    width: 100%;
+                    font-size: 0.7rem;
+                    color: var(--color11);
+  
+                    .user-edit {
+                      @include small-off-width-borders-transparent;
+                      border-radius: 24px;
+                      padding: 4px 10px 4px 10px;
+                      user-select: none;
+                      cursor: pointer;
+                      transition: 0.6s ease-in-out;
+                      color: var(--color12);
+  
+                      &:hover {
+                        border-top: 2px solid var(--color12);
+                        border-bottom: 2px solid var(--color12);
+                        color: var(--color16);
+                      }
+                    }
+  
+                    .user-resend {
+                      @include small-off-width-borders-transparent;
+                      border-radius: 24px;
+                      padding: 4px 10px 4px 10px;
+                      user-select: none;
+                      cursor: pointer;
+                      transition: 0.6s ease-in-out;
+                      color: var(--color12);
+  
+                      &:hover {
+                        border-top: 2px solid var(--color12);
+                        border-bottom: 2px solid var(--color12);
+                        color: var(--color16);
+                      }
+                    }
+
+                    .user-delete {
+                        @include small-off-width-borders-transparent;
+                        border-radius: 24px;
+                        padding: 4px 10px 4px 10px;
+                        user-select: none;
+                        cursor: pointer;
+                        transition: 0.6s ease-in-out;
+                        color: var(--color12);
+    
+                        &:hover {
+                          border-top: 2px solid var(--color12);
+                          border-bottom: 2px solid var(--color12);
+                          color: var(--color16);
+                        }
+                      }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+  
+      .right-column {
+        width: 54%;
+        align-self: center;
+  
+        .create-user, .edit-user {
+          @include flex-config(
+            $flex-direction: column,
+            $justify-content: space-evenly
+          );
+          align-items: center;
+  
+          input {
+            border-radius: 10px;
+            padding: 6px;
+            width: 90%;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            text-align: center;
+            align-self: center;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            background-color: var(--color11);
+            border-bottom: 3px solid var(--color16);
+            border-top: 3px solid var(--color16);
+            border-right: 1px solid var(--color16);
+            border-left: 1px solid var(--color16);
+            box-shadow: 0px 0px 8px 4px var(--blueGlow);
+          }
+  
+          .confirm-btn {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color12);
+            cursor: pointer;
+            user-select: none;
+            padding: 2px;
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-radius: 20px;
+            transition: 0.4s ease-in-out;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            padding: 4px 10px 4px 10px;
+            background-color: transparent;
+            width: 45%;
+            align-self: center;
+            margin: 20px 10px 20px 10px;
+  
+            &:hover {
+              border-top: 2px solid var(--color12);
+              border-bottom: 2px solid var(--color12);
+              color: var(--color16);
+            }
+          }
+
+          .cancel-btn {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color12);
+            cursor: pointer;
+            user-select: none;
+            padding: 2px;
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-radius: 20px;
+            transition: 0.4s ease-in-out;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            padding: 4px 10px 4px 10px;
+            background-color: transparent;
+            width: 45%;
+            align-self: center;
+            margin: 20px 10px 20px 10px;
+  
+            &:hover {
+              border-top: 2px solid var(--color12);
+              border-bottom: 2px solid var(--color12);
+              color: var(--color16);
+            }
+          }
+
+          .button-wrapper {
+            @include flex-config($flex-direction:row, $justify-content: space-between);
+            width: 90%;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,24 @@
+@import './variables.scss';
+@import './common.scss';
+
+@import './features/homepage/about.scss';
+@import './features/homepage/mission.scss';
+@import './features/homepage/projects.scss';
+@import './features/homepage/skills.scss';
+@import './features/homepage/testimonials.scss';
+@import './features/homepage/personal-links.scss';
+@import './features/homepage/contact.scss';
+@import './pages/testify.scss';
+@import './pages/blogs.scss';
+@import './pages/manager.scss';
+@import './features/manager-page-features/blog-manager.scss';
+@import './pages/error.scss';
+@import './pages/log.scss';
+@import './pages/create-admin-user.scss';
+@import './pages/blog-details.scss';
+@import './features/manager-page-features/user-manager.scss';
+@import './features/manager-page-features/testimonial-manager.scss';
+@import './features/manager-page-features/project-manager.scss';
+
+@import './features/navbar-and-footer/navbar.scss';
+@import './features/navbar-and-footer/footer.scss';

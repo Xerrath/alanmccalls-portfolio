@@ -1,0 +1,312 @@
+// --------------------------------
+// Light Mode
+// --------------------------------
+
+.LightMode {
+  .page-elements-wrapper {
+    .log {
+      @include flex-config(
+        $justify-content: space-between,
+        $flex-direction: row
+      );
+      align-items: center;
+
+      .left-column {
+        width: 50%;
+        height: 80vh;
+        border-right: 1px solid var(--color02);
+        border-left: 1px solid var(--color02);
+        border-top: 2px solid var(--color02);
+        border-bottom: 2px solid var(--color02);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 6px var(--color02);
+      }
+
+      .right-column {
+        @include flex-config(
+          $justify-content: space-between,
+          $flex-direction: column
+        );
+        margin-right: 20px;
+        padding-left: 20px;
+        width: 60%;
+        align-items: center;
+
+        .user-name-wrapper {
+          @include flex-config(
+            $justify-content: space-between,
+            $flex-direction: row
+          );
+          margin-top: 4px;
+          margin-bottom: 4px;
+          align-items: center;
+
+          input {
+            border: 1px solid var(--color02);
+            border-radius: 10px;
+            padding: 6px;
+            width: 100%;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            margin: 8px;
+            text-align: left;
+            box-shadow: 0px 0px 6px 2px var(--color02);
+          }
+        }
+
+        .password-wrapper {
+          @include flex-config(
+            $justify-content: space-between,
+            $flex-direction: row
+          );
+          margin-top: 4px;
+          margin-bottom: 4px;
+          align-items: center;
+
+          input {
+            border: 1px solid var(--color02);
+            border-radius: 10px;
+            padding: 6px;
+            width: 100%;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            margin: 8px;
+            text-align: left;
+            box-shadow: 0px 0px 6px 2px var(--color02);
+          }
+        }
+
+        .log-btn {
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--color02);
+          cursor: pointer;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          padding: 4px 10px 4px 10px;
+          background-color: transparent;
+
+          &:hover {
+            color: var(--color05);
+            border-top: 2px solid var(--color04);
+            border-bottom: 2px solid var(--color04);
+          }
+        }
+
+        .errorMessage {
+          text-align: center;
+          font-size: 0.9rem;
+          margin-top: 10px;
+          color: var(--color05);
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Mode
+// --------------------------------
+
+.DarkMode {
+  .page-elements-wrapper {
+    .log {
+      @include flex-config(
+        $justify-content: space-between,
+        $flex-direction: row
+      );
+      align-items: center;
+
+      .left-column {
+        width: 50%;
+        height: 80vh;
+        border-right: 1px solid var(--color16);
+        border-left: 1px solid var(--color16);
+        border-top: 2px solid var(--color16);
+        border-bottom: 2px solid var(--color16);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 8px 4px var(--blueGlow);
+      }
+
+      .right-column {
+        @include flex-config(
+          $justify-content: space-between,
+          $flex-direction: column
+        );
+        margin-right: 20px;
+        padding-left: 20px;
+        width: 60%;
+        align-items: center;
+
+        .user-name-wrapper {
+          @include flex-config(
+            $justify-content: space-between,
+            $flex-direction: row
+          );
+          margin-top: 4px;
+          margin-bottom: 4px;
+          align-items: center;
+
+          input {
+            border-right: 1px solid var(--color16);
+            border-left: 1px solid var(--color16);
+            border-top: 2px solid var(--color16);
+            border-bottom: 2px solid var(--color16);
+            border-radius: 10px;
+            padding: 6px;
+            width: 100%;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            margin: 8px;
+            text-align: left;
+            background-color: var(--color11);
+            box-shadow: 0px 0px 6px 2px var(--blueGlow);
+          }
+        }
+
+        .password-wrapper {
+          @include flex-config(
+            $justify-content: space-between,
+            $flex-direction: row
+          );
+          margin-top: 4px;
+          margin-bottom: 4px;
+          align-items: center;
+
+          input {
+            border-right: 1px solid var(--color16);
+            border-left: 1px solid var(--color16);
+            border-top: 2px solid var(--color16);
+            border-bottom: 2px solid var(--color16);
+            border-radius: 10px;
+            padding: 6px;
+            width: 100%;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            margin: 8px;
+            text-align: left;
+            background-color: var(--color11);
+            box-shadow: 0px 0px 6px 2px var(--blueGlow);
+          }
+        }
+
+        .log-btn {
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--color12);
+          cursor: pointer;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          padding: 4px 10px 4px 10px;
+          background-color: transparent;
+
+          &:hover {
+            color: var(--color16);
+            border-top: 2px solid var(--color12);
+            border-bottom: 2px solid var(--color12);
+          }
+        }
+
+        .errorMessage {
+          text-align: center;
+          font-size: 0.9rem;
+          margin-top: 10px;
+          color: var(--color15);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .LightMode,
+  .DarkMode {
+    .page-elements-wrapper {
+      .log {
+        @include flex-config(
+          $justify-content: center,
+          $flex-direction: column
+        );
+        align-items: center;
+
+        .left-column {
+          width: 100%;
+          height: 40vh;
+        }
+
+        .right-column {
+          @include flex-config(
+            $justify-content: center,
+            $flex-direction: column
+          );
+          min-width: 90%;
+
+          .user-name-wrapper {
+            @include flex-config(
+              $justify-content: center,
+              $flex-direction: column
+            );
+
+            input {
+              font-size: 0.7rem;
+              min-width: 90%;
+            }
+          }
+
+          .password-wrapper {
+            @include flex-config(
+              $justify-content: center,
+              $flex-direction: column
+            );
+            align-items: center;
+
+            input {
+              font-size: 0.6rem;
+              min-width: 90%;
+            }
+          }
+
+          .log-btn {
+            font-size: 0.8rem;
+          }
+
+          .errorMessage {
+            font-size: 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+// --------------------------------
+// LightMode
+// --------------------------------
+.LightMode {
+  .about {
+    @include flex-config($flex-direction: column);
+    @include section;
+    align-items: center;
+
+    h1 {
+      @include section-header;
+    }
+
+    .feature-contents {
+      @include flex-config(
+        $justify-content: space-evenly,
+        $flex-direction: column
+      );
+      margin-top: 20px;
+
+      .top-section {
+        margin: 10px;
+        height: 420px;
+        border-radius: 10px;
+        border-top: 4px solid var(--color02);
+        border-bottom: 4px solid var(--color02);
+        border-right: 2px solid var(--color02);
+        border-left: 2px solid var(--color02);
+        box-shadow: 0px 0px 10px 6px var(--color02);
+        overflow: hidden;
+
+        .top-bg-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .bottom-section {
+        margin-top: 8px;
+        padding: 10px;
+
+        h2 {
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// DarkMode
+// --------------------------------
+
+.DarkMode {
+  .about {
+    @include flex-config($flex-direction: column);
+    @include darksection;
+    align-items: center;
+
+    h1 {
+      @include dark-section-header;
+      width: 100%;
+      color: var(--color11);
+    }
+
+    .feature-contents {
+      @include flex-config(
+        $justify-content: space-evenly,
+        $flex-direction: column
+      );
+      margin-top: 20px;
+
+      .top-section {
+        margin: 10px;
+        height: 420px;
+        border-radius: 10px;
+        border-top: 4px solid var(--color15);
+        border-bottom: 4px solid var(--color15);
+        border-right: 2px solid var(--color15);
+        border-left: 2px solid var(--color15);
+        box-shadow: 0px 0px 10px 6px var(--color14);
+        overflow: hidden;
+
+        .top-bg-img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .bottom-section {
+        margin-top: 8px;
+        padding: 10px;
+
+        h2 {
+          text-align: center;
+          margin-bottom: 10px;
+          color: var(--color11);
+        }
+
+        p {
+          text-align: center;
+          color: var(--color11);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .DarkMode,
+  .LightMode {
+    .about {
+      h1 {
+        font-size: 1.2rem;
+      }
+      
+      .top-section {
+        min-height: 280px;
+        max-height: 280px;
+      }
+
+      .bottom-section {
+        h2 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .DarkMode,
+  .LightMode {
+    .top-section {
+      min-height: 140px;
+      max-height: 140px;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .DarkMode,
+  .LightMode {
+    .top-section {
+      min-height: 100px;
+      max-height: 100px;
+    }
+  }
+}

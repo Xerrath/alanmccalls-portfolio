@@ -1,0 +1,544 @@
+// --------------------------------
+// Light Theme
+// --------------------------------
+
+.LightMode {
+  .testimonials-content-wrapper {
+    @include flex-config($flex-direction: column, $justify-content: center);
+    align-items: center;
+    width: 90%;
+    padding: 4px;
+
+    input {
+      border-radius: 10px;
+      padding: 6px;
+      width: 80%;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1rem;
+      color: var(--color02);
+      text-align: center;
+      align-self: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      background-color: var(--color01);
+      border-bottom: 3px solid var(--color04);
+      border-top: 3px solid var(--color04);
+      border-right: 1px solid var(--color04);
+      border-left: 1px solid var(--color04);
+      box-shadow: 0px 0px 6px 3px var(--lightBlueGlow);
+    }
+
+    .testimoials-scroll-feature {
+      @include flex-config($flex-direction: column, $justify-content: center);
+      margin: 20px 10px 20px 10px;
+      padding: 10px;
+      border-top: 3px solid var(--color04);
+      border-bottom: 3px solid var(--color04);
+      border-right: 1px solid var(--color04);
+      border-left: 1px solid var(--color04);
+      box-shadow: 0px 0px 8px 4px var(--blueGlow);
+      border-radius: 20px;
+      width: 100%;
+
+      .scroll-wrapper {
+        @include flex-config(
+          $flex-direction: row,
+          $justify-content: space-between
+        );
+        align-items: center;
+        margin-top: 10px;
+
+        .slider {
+          @include lightmode-slider-btn;
+          z-index: 9;
+
+          &:hover {
+            @include lightmode-slider-btn-hover;
+          }
+        }
+
+        .left-slider {
+          user-select: none;
+          border-top: 2px solid var(--color15);
+          border-bottom: 2px solid var(--color15);
+          border-right: 3px solid var(--color15);
+          border-left: 2px solid var(--color15);
+          border-radius: 10px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          color: var(--color01);
+          min-height: 320px;
+
+          &:hover {
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 3px solid var(--color02);
+            border-left: 2px solid var(--color02);
+          }
+        }
+
+        .right-slider {
+          user-select: none;
+          border-top: 2px solid var(--color15);
+          border-bottom: 2px solid var(--color15);
+          border-right: 3px solid var(--color15);
+          border-left: 2px solid var(--color15);
+          border-radius: 10px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          color: var(--color01);
+          min-height: 320px;
+
+          &:hover {
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 3px solid var(--color02);
+            border-left: 2px solid var(--color02);
+          }
+        }
+
+        .hider-wrapper {
+          overflow: hidden;
+          padding: 4px 4px;
+          border-radius: 10px;
+          width: 100%;
+          z-index: 1;
+
+          .testimonial-approval-wrapper {
+            @include flex-config($justify-content: left, $flex-direction: row);
+            align-items: center;
+            transition: 0.6s ease-in-out;
+            width: 100%;
+
+            .pending-testimony-wrapper {
+              border-top: 3px solid var(--color04);
+              border-bottom: 3px solid var(--color04);
+              border-right: 1px solid var(--color04);
+              border-left: 1px solid var(--color04);
+              box-shadow: 0px 0px 4px 2px var(--lightBlueGlow);
+              padding: 4px;
+              border-radius: 10px;
+              margin: 10px;
+              min-height: 306px;
+              max-height: 306px;
+              min-width: 370px;
+              max-width: 370px;
+              background: linear-gradient(
+                76deg,
+                var(--color01) 84%,
+                var(--color02) 99.5%
+              );
+              @include flex-config(
+                $flex-direction: column,
+                $justify-content: space-between
+              );
+
+              .testimony-wrapper {
+                @include flex-config(
+                  $flex-direction: column,
+                  $justify-content: space-between
+                );
+                margin: 4px;
+
+                .clients-name {
+                  color: var(--color04);
+                  font-size: 1.4rem;
+                  border-right: 1px solid transparent;
+                  border-left: 1px solid transparent;
+                  border-bottom: 2px solid var(--color05);
+                  border-radius: 14px;
+                  padding: 0px 10px 4px 10px;
+                }
+
+                .testimonial-contents {
+                  border-right: 1px solid var(--color04);
+                  border-left: 1px solid var(--color04);
+                  border-bottom: 2px solid var(--color04);
+                  border-top: 2px solid var(--color04);
+                  color: var(--color01);
+                  font-size: 0.8rem;
+                  margin: 4px;
+                  border-radius: 10px;
+                  padding: 4px;
+                  background-color: var(--color02);
+                  box-shadow: 0px 0px 6px 3px var(--lightBlueGlow);
+                }
+
+                .company-url {
+                  border-right: 1px solid var(--color05);
+                  border-left: 1px solid var(--color05);
+                  border-bottom: 2px solid var(--color05);
+                  border-top: 2px solid var(--color05);
+                  color: var(--color02);
+                  margin: 4px;
+                  border-radius: 10px;
+                  padding: 4px;
+                  font-size: 0.6rem;
+                }
+
+                .testimonial-published {
+                  font-size: 0.8rem;
+                  color: var(--color02);
+                }
+              }
+            }
+            .approval-options-wrapper {
+              @include flex-config(
+                $flex-direction: row,
+                $justify-content: space-evenly
+              );
+              color: var(--color02);
+              font-size: 1.2rem;
+              align-items: center;
+              text-align: center;
+
+              .center-text {
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 40px;
+                height: 40px;
+                border-right: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-bottom: 2px solid transparent;
+                border-top: 2px solid transparent;
+                border-radius: 24px;
+                transition: 0.6s ease-in-out;
+                background: radial-gradient(
+                  var(--color01rgt),
+                  var(--color02rgt)
+                );
+
+                &:hover {
+                  border-right: 2px solid var(--color02);
+                  border-left: 2px solid var(--color02);
+                  border-bottom: 2px solid var(--color02);
+                  border-top: 2px solid var(--color02);
+                  background: transparent;
+                }
+
+                .approve {
+                  margin: 8px;
+                  cursor: pointer;
+                  user-select: none;
+                }
+
+                .symbol-edit {
+                  margin: 8px;
+                  width: 22px;
+                  height: 22px;
+                  cursor: pointer;
+                  user-select: none;
+                }
+
+                .Deny {
+                  margin: 8px;
+                  cursor: pointer;
+                  user-select: none;
+                }
+              }
+
+              #approve:hover {
+                box-shadow: 0px 0px 6px 4px var(--greenGlow);
+                background: radial-gradient(
+                  var(--green01),
+                  var(--green02),
+                  var(--green)
+                );
+              }
+
+              #symbol-edit:hover {
+                box-shadow: 0px 0px 6px 4px var(--yellowGlow);
+                background: radial-gradient(
+                  var(--yellow01),
+                  var(--yellow02),
+                  var(--yellow)
+                );
+              }
+
+              #deny-symbol:hover {
+                box-shadow: 0px 0px 6px 4px var(--redGlow);
+                background: radial-gradient(
+                  var(--red01),
+                  var(--red02),
+                  var(--red)
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Theme
+// --------------------------------
+
+.DarkMode {
+    .testimonials-content-wrapper {
+      @include flex-config($flex-direction: column, $justify-content: center);
+      align-items: center;
+      width: 90%;
+      padding: 4px;
+  
+      input {
+        border-radius: 10px;
+        padding: 6px;
+        width: 80%;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        color: var(--color02);
+        text-align: center;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background-color: var(--color11);
+        border-bottom: 3px solid var(--color16);
+        border-top: 3px solid var(--color16);
+        border-right: 1px solid var(--color16);
+        border-left: 1px solid var(--color16);
+        box-shadow: 0px 0px 6px 3px var(--blueGlow);
+      }
+  
+      .testimoials-scroll-feature {
+        @include flex-config($flex-direction: column, $justify-content: center);
+        margin: 20px 10px 20px 10px;
+        padding: 10px;
+        border-top: 3px solid var(--color16);
+        border-bottom: 3px solid var(--color16);
+        border-right: 1px solid var(--color16);
+        border-left: 1px solid var(--color16);
+        box-shadow: 0px 0px 8px 4px var(--blueGlow);
+        border-radius: 20px;
+        width: 100%;
+  
+        .scroll-wrapper {
+          @include flex-config(
+            $flex-direction: row,
+            $justify-content: space-between
+          );
+          align-items: center;
+          margin-top: 10px;
+  
+          .slider {
+            @include darkmode-slider-btn;
+            z-index: 9;
+  
+            &:hover {
+              @include darkmode-slider-btn-hover;
+            }
+          }
+  
+          .left-slider {
+            user-select: none;
+            border-top: 2px solid var(--color15);
+            border-bottom: 2px solid var(--color15);
+            border-right: 3px solid var(--color15);
+            border-left: 2px solid var(--color15);
+            border-radius: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            color: var(--color11);
+            min-height: 320px;
+  
+            &:hover {
+              border-top: 2px solid var(--color02);
+              border-bottom: 2px solid var(--color02);
+              border-right: 3px solid var(--color02);
+              border-left: 2px solid var(--color02);
+            }
+          }
+  
+          .right-slider {
+            user-select: none;
+            border-top: 2px solid var(--color15);
+            border-bottom: 2px solid var(--color15);
+            border-right: 3px solid var(--color15);
+            border-left: 2px solid var(--color15);
+            border-radius: 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            color: var(--color11);
+            min-height: 320px;
+  
+            &:hover {
+              border-top: 2px solid var(--color02);
+              border-bottom: 2px solid var(--color02);
+              border-right: 3px solid var(--color02);
+              border-left: 2px solid var(--color02);
+            }
+          }
+  
+          .hider-wrapper {
+            overflow: hidden;
+            padding: 4px 4px;
+            border-radius: 10px;
+            width: 100%;
+            z-index: 1;
+  
+            .testimonial-approval-wrapper {
+              @include flex-config($justify-content: left, $flex-direction: row);
+              align-items: center;
+              transition: 0.6s ease-in-out;
+              width: 100%;
+  
+              .pending-testimony-wrapper {
+                border-top: 3px solid var(--color13);
+                border-bottom: 3px solid var(--color13);
+                border-right: 1px solid var(--color13);
+                border-left: 1px solid var(--color13);
+                box-shadow: 0px 0px 4px 2px var(--purpleGlow);
+                padding: 4px;
+                border-radius: 10px;
+                margin: 10px;
+                min-height: 306px;
+                max-height: 306px;
+                min-width: 370px;
+                max-width: 370px;
+                background: linear-gradient(315deg, var(--color13), var(--color14) 50%, var(--color14), var(--color14), var(--color14), var(--color15), var(--color15));
+                @include flex-config(
+                  $flex-direction: column,
+                  $justify-content: space-between
+                );
+  
+                .testimony-wrapper {
+                  @include flex-config(
+                    $flex-direction: column,
+                    $justify-content: space-between
+                  );
+                  margin: 4px;
+  
+                  .clients-name {
+                    color: var(--color16);
+                    font-size: 1.4rem;
+                    border-right: 1px solid transparent;
+                    border-left: 1px solid transparent;
+                    border-bottom: 2px solid var(--color13);
+                    border-radius: 14px;
+                    padding: 0px 10px 4px 10px;
+                  }
+  
+                  .testimonial-contents {
+                    border-right: 1px solid var(--color16);
+                    border-left: 1px solid var(--color16);
+                    border-bottom: 2px solid var(--color16);
+                    border-top: 2px solid var(--color16);
+                    color: var(--color02);
+                    font-size: 0.8rem;
+                    margin: 4px;
+                    border-radius: 10px;
+                    padding: 4px;
+                    background-color: var(--color11);
+                    box-shadow: 0px 0px 6px 3px var(--blueGlow);
+                  }
+  
+                  .company-url {
+                    border-right: 1px solid var(--color12);
+                    border-left: 1px solid var(--color12);
+                    border-bottom: 2px solid var(--color12);
+                    border-top: 2px solid var(--color12);
+                    color: var(--color11);
+                    margin: 4px;
+                    border-radius: 10px;
+                    padding: 4px;
+                    font-size: 0.6rem;
+                  }
+
+                  .testimonial-published {
+                    font-size: 0.8rem;
+                    color: var(--color16);
+                  }
+                }
+              }
+              .approval-options-wrapper {
+                @include flex-config(
+                  $flex-direction: row,
+                  $justify-content: space-evenly
+                );
+                color: var(--color02);
+                font-size: 1.2rem;
+                align-items: center;
+                text-align: center;
+  
+                .center-text {
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  width: 40px;
+                  height: 40px;
+                  border-right: 2px solid transparent;
+                  border-left: 2px solid transparent;
+                  border-bottom: 2px solid transparent;
+                  border-top: 2px solid transparent;
+                  border-radius: 24px;
+                  transition: 0.6s ease-in-out;
+                  background: radial-gradient(rgba(251, 202, 255, 0.8), var(--color12));
+  
+                  &:hover {
+                    border-right: 2px solid var(--color02);
+                    border-left: 2px solid var(--color02);
+                    border-bottom: 2px solid var(--color02);
+                    border-top: 2px solid var(--color02);
+                    background: transparent;
+                  }
+  
+                  .approve {
+                    margin: 8px;
+                    cursor: pointer;
+                    user-select: none;
+                  }
+  
+                  .symbol-edit {
+                    margin: 8px;
+                    width: 22px;
+                    height: 22px;
+                    cursor: pointer;
+                    user-select: none;
+                  }
+  
+                  .Deny {
+                    margin: 8px;
+                    cursor: pointer;
+                    user-select: none;
+                  }
+                }
+  
+                #approve:hover {
+                  box-shadow: 0px 0px 6px 4px var(--greenGlow);
+                  background: radial-gradient(
+                    var(--green01),
+                    var(--green02),
+                    var(--green)
+                  );
+                }
+  
+                #symbol-edit:hover {
+                  box-shadow: 0px 0px 6px 4px var(--yellowGlow);
+                  background: radial-gradient(
+                    var(--yellow01),
+                    var(--yellow02),
+                    var(--yellow)
+                  );
+                }
+  
+                #deny-symbol:hover {
+                  box-shadow: 0px 0px 6px 4px var(--redGlow);
+                  background: radial-gradient(
+                    var(--red01),
+                    var(--red02),
+                    var(--red)
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }

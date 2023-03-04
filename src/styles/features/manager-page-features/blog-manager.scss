@@ -1,0 +1,960 @@
+// --------------------------------
+// Light Theme
+// --------------------------------
+
+.LightMode {
+  .manager-element {
+    .manager-header {
+      font-size: 1.8rem;
+      color: var(--color04);
+      padding: 4px 10px 4px 10px;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-bottom: 2px solid var(--color05);
+      border-radius: 20px;
+      width: 90%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .blog-manager-form {
+      @include flex-config(
+        $justify-content: space-evenly,
+        $flex-direction: column
+      );
+      min-width: 90%;
+
+      h2 {
+        border-bottom: 2px solid var(--color04);
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-radius: 20px;
+        color: var(--color05);
+        padding: 4px 10px;
+        width: 100%;
+      }
+
+      .dropzone-wrapper {
+        @include flex-config(
+          $flex-direction: row,
+          $justify-content: space-evenly
+        );
+        align-items: center;
+        align-self: center;
+        margin: 10px;
+        font-size: 0.8rem;
+        width: 100%;
+        min-height: 240px;
+        max-height: 280px;
+        padding: 4px 6px;
+        border-right: 1px solid var(--color04);
+        border-left: 1px solid var(--color04);
+        border-top: 2px solid var(--color04);
+        border-bottom: 2px solid var(--color04);
+        border-radius: 10px;
+        background-color: var(--color01);
+        box-shadow: 0px 0px 6px 3px var(--lightBlueGlow);
+
+        .dropped-image {
+          height: 160px;
+          min-width: 96%;
+          max-width: 96%;
+          justify-content: center;
+          border-radius: 10px;
+          overflow: hidden;
+          border-top: 2px solid var(--color02);
+          border-bottom: 2px solid var(--color02);
+          border-right: 1px solid var(--color02);
+          border-left: 1px solid var(--color02);
+        }
+
+        .remove-image {
+          text-align: center;
+          color: var(--color05);
+          cursor: pointer;
+          user-select: none;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 0.8rem;
+          background-color: transparent;
+          width: 90%;
+          align-self: center;
+
+          &:hover {
+            border-top: 2px solid var(--color05);
+            border-bottom: 2px solid var(--color05);
+            color: var(--color04);
+          }
+        }
+
+        .text-center {
+          text-align: center;
+          min-width: 100%;
+          margin: 20px;
+          padding: 10px;
+        }
+
+        .thumb-image-drop {
+          width: 30%;
+          height: 200px;
+          @include flex-config(
+            $flex-direction: column,
+            $justify-content: space-between
+          );
+          align-items: center;
+          text-align: center;
+          border-top: 2px solid var(--color06);
+          border-bottom: 2px solid var(--color06);
+          border-right: 1px solid var(--color06);
+          border-left: 1px solid var(--color06);
+          border-radius: 10px;
+          padding: 4px 4px;
+          overflow: hidden;
+          color: var(--color02);
+          cursor: pointer;
+
+          .thumbImageText {
+            height: 160px;
+            min-width: 96%;
+            max-width: 96%;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 1px solid var(--color02);
+            border-left: 1px solid var(--color02);
+            @include flex-config($justify-content: center);
+            align-items: center;
+          }
+        }
+
+        .hero-image-drop {
+          width: 30%;
+          height: 200px;
+          @include flex-config(
+            $flex-direction: column,
+            $justify-content: space-between
+          );
+          align-items: center;
+          text-align: center;
+          border-top: 2px solid var(--color06);
+          border-bottom: 2px solid var(--color06);
+          border-right: 1px solid var(--color06);
+          border-left: 1px solid var(--color06);
+          border-radius: 10px;
+          padding: 4px 4px;
+          overflow: hidden;
+          color: var(--color02);
+          cursor: pointer;
+
+          .heroImageText {
+            height: 160px;
+            min-width: 96%;
+            max-width: 96%;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 1px solid var(--color02);
+            border-left: 1px solid var(--color02);
+            @include flex-config($justify-content: center);
+            align-items: center;
+          }
+        }
+      }
+
+      input {
+        border: 1px solid var(--color02);
+        border-radius: 10px;
+        padding: 6px;
+        width: 100%;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        color: var(--color02);
+        text-align: center;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--color01);
+        border-bottom: 3px solid var(--color04);
+        border-top: 3px solid var(--color04);
+        border-right: 1px solid var(--color04);
+        border-left: 1px solid var(--color04);
+        box-shadow: 0px 0px 8px 4px var(--lightBlueGlow);
+      }
+
+      .create-blog-btn {
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--color05);
+        cursor: pointer;
+        padding: 2px;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        padding: 4px 10px 4px 10px;
+        background-color: transparent;
+        width: 100%;
+        align-self: center;
+        margin: 20px 10px 20px 10px;
+        user-select: none;
+
+        &:hover {
+          border-top: 2px solid var(--color05);
+          border-bottom: 2px solid var(--color05);
+          color: var(--color04);
+        }
+      }
+
+      .blog-edit-cancel-btn {
+        text-align: center;
+        color: var(--color05);
+        cursor: pointer;
+        user-select: none;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        padding: 4px 10px 4px 10px;
+        background-color: transparent;
+        width: 90%;
+        align-self: center;
+        margin: 20px 10px 20px 10px;
+
+        &:hover {
+          border-top: 2px solid var(--color05);
+          border-bottom: 2px solid var(--color05);
+          color: var(--color04);
+        }
+      }
+    }
+
+    .Blog-editor-wrapper {
+      @include flex-config($flex-direction: column, $justify-content: center);
+      margin: 20px 10px 20px 10px;
+      padding: 10px;
+      border-top: 3px solid var(--color04);
+      border-bottom: 3px solid var(--color04);
+      border-right: 1px solid var(--color04);
+      border-left: 1px solid var(--color04);
+      box-shadow: 0px 0px 8px 4px var(--blueGlow);
+      border-radius: 20px;
+      width: 90%;
+
+      .editor-header-wrapper {
+        @include flex-config($flex-direction: column, $justify-content: center);
+        text-align: center;
+        align-items: center;
+
+        .editor-title {
+          font-size: 1.6rem;
+          color: var(--color04);
+          border-bottom: 2px solid var(--color05);
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          width: 90%;
+          margin: 10px;
+          padding: 4px 10px 4px 10px;
+          border-radius: 14px;
+        }
+
+        .editor-directions {
+          font-size: 0.8rem;
+          margin: 10px 0px 4px 0px;
+          color: var(--color01);
+        }
+
+        input {
+          width: 60%;
+          height: 2rem;
+          border-top: 3px solid var(--color04);
+          border-bottom: 3px solid var(--color04);
+          border-right: 1px solid var(--color04);
+          border-left: 1px solid var(--color04);
+          box-shadow: 0px 0px 6px 3px var(--lightBlueGlow);
+          border-radius: 12px;
+          padding: 2px 6px 2px 6px;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          background-color: var(--color01);
+        }
+      }
+
+      .scroll-wrapper {
+        @include flex-config(
+          $flex-direction: row,
+          $justify-content: space-between
+        );
+        align-items: center;
+        margin-top: 10px;
+
+        .blog-scroll-hider-wrapper {
+          overflow: hidden;
+          padding: 4px 4px;
+          border-radius: 10px;
+          width: 100%;
+          z-index: 1;
+
+          .blog-filtered-wrapper {
+            @include flex-config(
+              $justify-content: left,
+              $flex-direction: row-reverse
+            );
+            align-items: center;
+            transition: 0.6s ease-in-out;
+            width: 100%;
+
+            .slide-contents-wrapper {
+              border-top: 3px solid var(--color04);
+              border-bottom: 3px solid var(--color04);
+              border-right: 1px solid var(--color04);
+              border-left: 1px solid var(--color04);
+              box-shadow: 0px 0px 4px 2px var(--lightBlueGlow);
+              padding: 4px;
+              border-radius: 10px;
+              margin: 10px;
+              min-height: 240px;
+              max-height: 240px;
+              min-width: 320px;
+              max-width: 320px;
+              background: linear-gradient(
+                76deg,
+                var(--color01) 84%,
+                var(--color02) 99.5%
+              );
+              @include flex-config(
+                $flex-direction: column,
+                $justify-content: space-between
+              );
+
+              .blog-info-wrapper {
+                @include flex-config(
+                  $flex-direction: column,
+                  $justify-content: space-between
+                );
+
+                .blog-title {
+                  color: var(--color04);
+                  font-size: 1.2rem;
+                  margin-top: 4px;
+                  padding: 4px 10px 4px 10px;
+                  border-right: 1px solid transparent;
+                  border-left: 1px solid transparent;
+                  border-bottom: 2px solid var(--color05);
+                }
+
+                .blog-date-posted {
+                  font-size: 0.7rem;
+                  margin: 10px 4px 0px 4px;
+                  color: var(--color02);
+                }
+              }
+
+              .thumb-image-preview {
+                height: 100px;
+                width: 100%;
+
+                .thumb-image-display {
+                  align-self: center;
+                  height: 100%;
+                  border-radius: 10px;
+                  border-top: 1px solid var(--color02);
+                  border-bottom: 1px solid var(--color02);
+                  border-right: 2px solid var(--color02);
+                  border-left: 2px solid var(--color02);
+                }
+              }
+
+              .select-wrapper {
+                @include flex-config(
+                  $flex-direction: row,
+                  $justify-content: space-between
+                );
+                font-size: 0.8rem;
+                color: var(--color02);
+
+                .edit-wrapper {
+                  @include small-off-width-borders-transparent;
+                  border-radius: 24px;
+                  padding: 4px 10px 4px 10px;
+                  user-select: none;
+                  cursor: pointer;
+                  transition: 0.6s ease-in-out;
+                  user-select: none;
+
+                  &:hover {
+                    border-top: 2px solid var(--color05);
+                    border-bottom: 2px solid var(--color05);
+                    color: var(--color04);
+                  }
+                }
+
+                .delete-wrapper {
+                  @include small-off-width-borders-transparent;
+                  border-radius: 24px;
+                  padding: 4px 10px 4px 10px;
+                  user-select: none;
+                  cursor: pointer;
+                  transition: 0.6s ease-in-out;
+                  user-select: none;
+
+                  &:hover {
+                    border-top: 2px solid var(--color05);
+                    border-bottom: 2px solid var(--color05);
+                    color: var(--color04);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .slider {
+          @include lightmode-slider-btn;
+          z-index: 9;
+
+          &:hover {
+            @include lightmode-slider-btn-hover;
+          }
+        }
+
+        .left-slider {
+          @include lightmode-left-slider-btn;
+          min-height: 240px;
+
+          &:hover {
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 3px solid var(--color02);
+            border-left: 2px solid var(--color02);
+          }
+        }
+
+        .right-slider {
+          @include lightmode-right-slider-btn;
+          min-height: 240px;
+
+          &:hover {
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 3px solid var(--color02);
+            border-left: 2px solid var(--color02);
+          }
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Theme
+// --------------------------------
+
+.DarkMode {
+  .manager-element {
+    .manager-header {
+      font-size: 1.8rem;
+      color: var(--color16);
+      padding: 4px 10px 4px 10px;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-bottom: 2px solid var(--color13);
+      border-radius: 20px;
+      width: 90%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .blog-manager-form {
+      @include flex-config(
+        $justify-content: space-evenly,
+        $flex-direction: column
+      );
+      min-width: 90%;
+
+      h2 {
+        border-bottom: 2px solid var(--color16);
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-radius: 20px;
+        color: var(--color12);
+        padding: 4px 10px;
+        width: 100%;
+      }
+
+      .dropzone-wrapper {
+        @include flex-config(
+          $flex-direction: row,
+          $justify-content: space-evenly
+        );
+        align-items: center;
+        align-self: center;
+        margin: 10px;
+        font-size: 0.8rem;
+        width: 100%;
+        min-height: 240px;
+        max-height: 280px;
+        padding: 4px 6px;
+        border-right: 1px solid var(--color16);
+        border-left: 1px solid var(--color16);
+        border-top: 2px solid var(--color16);
+        border-bottom: 2px solid var(--color16);
+        border-radius: 10px;
+        background-color: var(--color11);
+        box-shadow: 0px 0px 6px 3px var(--blueGlow);
+
+        .dropped-image {
+          height: 160px;
+          min-width: 96%;
+          max-width: 96%;
+          justify-content: center;
+          border-radius: 10px;
+          overflow: hidden;
+          border-top: 2px solid var(--color15);
+          border-bottom: 2px solid var(--color15);
+          border-right: 1px solid var(--color15);
+          border-left: 1px solid var(--color15);
+        }
+
+        .remove-image {
+          text-align: center;
+          color: var(--color12);
+          cursor: pointer;
+          user-select: none;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 0.8rem;
+          background-color: transparent;
+          width: 90%;
+          align-self: center;
+
+          &:hover {
+            border-top: 2px solid var(--color12);
+            border-bottom: 2px solid var(--color12);
+            color: var(--color16);
+          }
+        }
+
+        .text-center {
+          text-align: center;
+          min-width: 100%;
+          margin: 20px;
+          padding: 10px;
+        }
+
+        .thumb-image-drop {
+          width: 30%;
+          height: 200px;
+          @include flex-config(
+            $flex-direction: column,
+            $justify-content: space-between
+          );
+          align-items: center;
+          text-align: center;
+          border-top: 2px solid var(--color14);
+          border-bottom: 2px solid var(--color14);
+          border-right: 1px solid var(--color14);
+          border-left: 1px solid var(--color14);
+          border-radius: 10px;
+          padding: 4px 4px;
+          overflow: hidden;
+          color: var(--color02);
+          cursor: pointer;
+
+          .thumbImageText {
+            height: 160px;
+            min-width: 96%;
+            max-width: 96%;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            border-top: 2px solid var(--color15);
+            border-bottom: 2px solid var(--color15);
+            border-right: 1px solid var(--color15);
+            border-left: 1px solid var(--color15);
+            @include flex-config($justify-content: center);
+            align-items: center;
+          }
+        }
+
+        .hero-image-drop {
+          width: 30%;
+          height: 200px;
+          @include flex-config(
+            $flex-direction: column,
+            $justify-content: space-between
+          );
+          align-items: center;
+          text-align: center;
+          border-top: 2px solid var(--color14);
+          border-bottom: 2px solid var(--color14);
+          border-right: 1px solid var(--color14);
+          border-left: 1px solid var(--color14);
+          border-radius: 10px;
+          padding: 4px 4px;
+          overflow: hidden;
+          color: var(--color02);
+          cursor: pointer;
+
+          .heroImageText {
+            height: 160px;
+            min-width: 96%;
+            max-width: 96%;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            border-top: 2px solid var(--color15);
+            border-bottom: 2px solid var(--color15);
+            border-right: 1px solid var(--color15);
+            border-left: 1px solid var(--color15);
+            @include flex-config($justify-content: center);
+            align-items: center;
+          }
+        }
+      }
+
+      input {
+        border-radius: 10px;
+        padding: 6px;
+        width: 100%;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        color: var(--color02);
+        text-align: center;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--color11);
+        border-bottom: 3px solid var(--color16);
+        border-top: 3px solid var(--color16);
+        border-right: 1px solid var(--color16);
+        border-left: 1px solid var(--color16);
+        box-shadow: 0px 0px 6px 3px var(--blueGlow);
+      }
+
+      .create-blog-btn {
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--color12);
+        cursor: pointer;
+        padding: 2px;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        padding: 4px 10px 4px 10px;
+        background-color: transparent;
+        width: 100%;
+        align-self: center;
+        margin: 20px 10px 20px 10px;
+        user-select: none;
+
+        &:hover {
+          border-top: 2px solid var(--color12);
+          border-bottom: 2px solid var(--color12);
+          color: var(--color16);
+        }
+      }
+
+      .blog-edit-cancel-btn {
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--color12);
+        cursor: pointer;
+        user-select: none;
+        padding: 2px;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-radius: 20px;
+        transition: 0.4s ease-in-out;
+        font-family: tachyon, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1rem;
+        padding: 4px 10px 4px 10px;
+        background-color: transparent;
+        width: 100%;
+        align-self: center;
+        margin: 20px 10px 20px 10px;
+
+        &:hover {
+          border-top: 2px solid var(--color12);
+          border-bottom: 2px solid var(--color12);
+          color: var(--color16);
+        }
+      }
+    }
+
+    .Blog-editor-wrapper {
+      @include flex-config($flex-direction: column, $justify-content: center);
+      margin: 20px 10px 20px 10px;
+      padding: 10px;
+      border-top: 3px solid var(--color13);
+      border-bottom: 3px solid var(--color13);
+      border-right: 1px solid var(--color13);
+      border-left: 1px solid var(--color13);
+      box-shadow: 0px 0px 8px 4px var(--purpleGlow);
+      border-radius: 20px;
+      width: 90%;
+
+      .editor-header-wrapper {
+        @include flex-config($flex-direction: column, $justify-content: center);
+        text-align: center;
+        align-items: center;
+
+        .editor-title {
+          font-size: 1.6rem;
+          color: var(--color16);
+          border-bottom: 2px solid var(--color13);
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          width: 90%;
+          margin: 10px;
+          padding: 4px 10px 4px 10px;
+          border-radius: 14px;
+        }
+
+        .editor-directions {
+          font-size: 0.8rem;
+          margin: 10px 0px 4px 0px;
+          color: var(--color12);
+        }
+
+        input {
+          width: 60%;
+          height: 2rem;
+          border-top: 3px solid var(--color16);
+          border-bottom: 3px solid var(--color16);
+          border-right: 1px solid var(--color16);
+          border-left: 1px solid var(--color16);
+          box-shadow: 0px 0px 6px 3px var(--blueGlow);
+          border-radius: 12px;
+          padding: 2px 6px 2px 6px;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          background-color: var(--color11);
+        }
+      }
+
+      .scroll-wrapper {
+        @include flex-config(
+          $flex-direction: row,
+          $justify-content: space-between
+        );
+        align-items: center;
+        margin-top: 10px;
+
+        .blog-scroll-hider-wrapper {
+          overflow: hidden;
+          padding: 4px 4px;
+          border-radius: 10px;
+          width: 100%;
+          z-index: 1;
+
+          .blog-filtered-wrapper {
+            @include flex-config(
+              $justify-content: left,
+              $flex-direction: row-reverse
+            );
+            align-items: center;
+            transition: 0.6s ease-in-out;
+            width: 100%;
+
+            .slide-contents-wrapper {
+              border-top: 3px solid var(--color16);
+              border-bottom: 3px solid var(--color16);
+              border-right: 1px solid var(--color16);
+              border-left: 1px solid var(--color16);
+              box-shadow: 0px 0px 4px 2px var(--blueGlow);
+              padding: 4px;
+              border-radius: 10px;
+              margin: 10px;
+              min-height: 240px;
+              max-height: 240px;
+              min-width: 320px;
+              max-width: 320px;
+              @include flex-config(
+                $flex-direction: column,
+                $justify-content: space-between
+              );
+
+              .blog-info-wrapper {
+                @include flex-config(
+                  $flex-direction: column,
+                  $justify-content: space-evenly
+                );
+
+                .blog-title {
+                  color: var(--color12);
+                  font-size: 1.2rem;
+                  margin-top: 4px;
+                  padding: 4px 10px 4px 10px;
+                  border-right: 1px solid transparent;
+                  border-left: 1px solid transparent;
+                  border-bottom: 2px solid var(--color13);
+                }
+
+                .blog-date-posted {
+                  font-size: 0.7rem;
+                  margin: 10px 4px 0px 4px;
+                }
+              }
+
+              .thumb-image-preview {
+                height: 100px;
+                width: 100%;
+
+                .thumb-image-display {
+                  align-self: center;
+                  height: 100%;
+                  border-radius: 10px;
+                  border-top: 1px solid var(--color15);
+                  border-bottom: 1px solid var(--color15);
+                  border-right: 2px solid var(--color15);
+                  border-left: 2px solid var(--color15);
+                }
+              }
+
+              .select-wrapper {
+                @include flex-config(
+                  $flex-direction: row,
+                  $justify-content: space-between
+                );
+                font-size: 0.8rem;
+                color: var(--color12);
+
+                .edit-wrapper {
+                  @include small-off-width-borders-transparent;
+                  border-radius: 24px;
+                  padding: 4px 10px 4px 10px;
+                  user-select: none;
+                  cursor: pointer;
+                  transition: 0.6s ease-in-out;
+                  user-select: none;
+
+                  &:hover {
+                    border-top: 2px solid var(--color12);
+                    border-bottom: 2px solid var(--color12);
+                    color: var(--color16);
+                  }
+                }
+
+                .delete-wrapper {
+                  @include small-off-width-borders-transparent;
+                  border-radius: 24px;
+                  padding: 4px 10px 4px 10px;
+                  user-select: none;
+                  cursor: pointer;
+                  transition: 0.6s ease-in-out;
+                  user-select: none;
+
+                  &:hover {
+                    border-top: 2px solid var(--color12);
+                    border-bottom: 2px solid var(--color12);
+                    color: var(--color16);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .slider {
+          @include darkmode-slider-btn;
+          z-index: 9;
+
+          &:hover {
+            @include darkmode-slider-btn-hover;
+          }
+        }
+
+        .left-slider {
+          user-select: none;
+          border-top: 2px solid var(--color15);
+          border-bottom: 2px solid var(--color15);
+          border-right: 3px solid var(--color15);
+          border-left: 2px solid var(--color15);
+          border-radius: 10px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          color: var(--color11);
+          min-height: 240px;
+
+          &:hover {
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 3px solid var(--color02);
+            border-left: 2px solid var(--color02);
+          }
+        }
+
+        .right-slider {
+          user-select: none;
+          border-top: 2px solid var(--color15);
+          border-bottom: 2px solid var(--color15);
+          border-right: 3px solid var(--color15);
+          border-left: 2px solid var(--color15);
+          border-radius: 10px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          color: var(--color11);
+          min-height: 240px;
+
+          &:hover {
+            border-top: 2px solid var(--color02);
+            border-bottom: 2px solid var(--color02);
+            border-right: 3px solid var(--color02);
+            border-left: 2px solid var(--color02);
+          }
+        }
+      }
+    }
+  }
+}

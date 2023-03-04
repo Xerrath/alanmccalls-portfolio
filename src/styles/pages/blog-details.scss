@@ -1,0 +1,279 @@
+// --------------------------------
+// Light Mode
+// --------------------------------
+
+.LightMode {
+  .blog-details-wrapper {
+    min-height: 80vh;
+
+    .blog-details-elements {
+      @include flex-config(
+        $justify-content: space-between,
+        $flex-direction: column
+      );
+      text-align: center;
+      align-items: center;
+
+      .sub-header {
+        @include flex-config(
+          $justify-content: space-between,
+          $flex-direction: row
+        );
+        min-height: 30px;
+        align-items: center;
+        width: 90%;
+
+        .date-logged {
+          margin-right: auto;
+          margin: 12px;
+          color: var(--color05);
+        }
+
+        a {
+          text-decoration: none;
+
+          .go-back {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-size: 0.8rem;
+            color: var(--color05);
+            text-align: center;
+            cursor: pointer;
+            padding: 4px 10px 4px 10px;
+            border-radius: 30px;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            transition: 0.6s ease-in-out;
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+
+            &:hover {
+              color: var(--color05);
+              border-top: 2px solid var(--color04);
+              border-bottom: 2px solid var(--color04);
+            }
+          }
+        }
+      }
+
+      .img-details-link-wrapper {
+        background-color: var(--color02);
+        color: var(--color01);
+        border-right: 1px solid var(--color04);
+        border-left: 1px solid var(--color04);
+        border-top: 2px solid var(--color04);
+        border-bottom: 2px solid var(--color04);
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 6px var(--color04);
+        border-radius: 20px;
+        height: 400px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        min-width: 80%;
+        max-width: 80%;
+        @include flex-config($flex-direction: column, $justify-content: center);
+        align-items: flex-start;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .blog-details-information {
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+
+        .blog-details-header {
+          align-items: center;
+          text-align: center;
+
+          h2 {
+            color: var(--color02);
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--color05);
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-radius: 20px;
+            padding-bottom: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+        }
+
+        .blog-details-contents {
+          text-align: left;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Mode
+// --------------------------------
+
+.DarkMode {
+  .blog-details-wrapper {
+    min-height: 80vh;
+
+    .blog-details-elements {
+      @include flex-config(
+        $justify-content: space-between,
+        $flex-direction: column
+      );
+      text-align: center;
+      align-items: center;
+
+      .sub-header {
+        @include flex-config(
+          $justify-content: space-between,
+          $flex-direction: row
+        );
+        text-decoration: none;
+        min-height: 30px;
+        align-items: center;
+        width: 90%;
+
+        .date-logged {
+          margin-right: auto;
+          margin: 12px;
+          color: var(--color12);
+        }
+
+        a {
+          text-decoration: none;
+
+          .go-back {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-size: 0.8rem;
+            color: var(--color12);
+            text-align: center;
+            cursor: pointer;
+            padding: 4px 10px 4px 10px;
+            border-radius: 30px;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            transition: 0.6s ease-in-out;
+            cursor: pointer;
+            user-select: none;
+            text-decoration: none;
+
+            &:hover {
+              color: var(--color16);
+              border-top: 2px solid var(--color12);
+              border-bottom: 2px solid var(--color12);
+            }
+          }
+        }
+      }
+
+      .img-details-link-wrapper {
+        background-color: var(--color02);
+        color: var(--color11);
+        border-right: 1px solid var(--color15);
+        border-left: 1px solid var(--color15);
+        border-top: 2px solid var(--color15);
+        border-bottom: 2px solid var(--color15);
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 6px var(--blueGlow);
+        border-radius: 20px;
+        height: 400px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        min-width: 80%;
+        max-width: 80%;
+        @include flex-config($flex-direction: column, $justify-content: center);
+        align-items: flex-start;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .blog-details-information {
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+
+        .blog-details-header {
+          align-items: center;
+          text-align: center;
+
+          h2 {
+            color: var(--color12);
+            font-size: 1.6rem;
+            border-bottom: 2px solid var(--color16);
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-radius: 20px;
+            padding-bottom: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+        }
+
+        .blog-details-contents {
+          text-align: left;
+          margin-bottom: 10px;
+          color: var(--color11);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .LightMode,
+  .DarkMode {
+    .blog-details-wrapper {
+      min-height: 80vh;
+
+      .blog-details-elements {
+        .sub-header {
+          .date-logged {
+            font-size: 0.7rem;
+          }
+
+          .go-back {
+            font-size: 0.6rem;
+          }
+        }
+      }
+
+      .img-details-link-wrapper {
+        max-height: 120px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .blog-details-information {
+        .blog-details-header {
+          h2 {
+            font-size: 0.8rem;
+          }
+        }
+
+        .blog-details-contents {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,166 @@
+// --------------------------------
+// Light Theme
+// --------------------------------
+
+.LightMode {
+  .contents-wrapper {
+    margin: 20px 0px 20px 0px;
+
+    .no-match-wrapper {
+      @include flex-config($justify-content: center, $flex-direction: column);
+      margin-top: 10px;
+      background: linear-gradient(
+        76deg,
+        var(--color01) 84%,
+        var(--color02) 99.5%
+      );
+      border-radius: 20px;
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+      height: 90vh;
+      box-shadow: 0px 0px 8px 3px var(--lightBlueGlow);
+      padding: 20px 10px 20px 10px;
+      border: 3px solid var(--color02);
+
+      .image-header {
+        font-family: "Orbitron", sans-serif;
+        font-size: 6em;
+        color: var(--color05);
+      }
+
+      .error-header {
+        color: var(--color02);
+      }
+
+      a {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        font-size: 1.2rem;
+        color: var(--color04);
+        text-align: center;
+        cursor: pointer;
+        padding: 4px 10px 4px 10px;
+        border-radius: 30px;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        transition: 0.6s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--color05);
+          border-top: 2px solid var(--color04);
+          border-bottom: 2px solid var(--color04);
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Theme
+// --------------------------------
+
+.DarkMode {
+  .contents-wrapper {
+    margin: 20px 0px 20px 0px;
+
+    .no-match-wrapper {
+      @include flex-config($justify-content: center, $flex-direction: column);
+      margin-top: 10px;
+      background: linear-gradient(
+        75deg,
+        var(--color02),
+        var(--color02),
+        var(--color02),
+        var(--color06),
+        var(--color06)
+      );
+      border-radius: 20px;
+      padding: 20px;
+      align-items: center;
+      text-align: center;
+      height: 90vh;
+      box-shadow: 0px 0px 8px 3px var(--purpleGlow);
+      padding: 20px 10px 20px 10px;
+      border: 3px solid var(--color14);
+
+      .image-header {
+        font-family: "Orbitron", sans-serif;
+        font-size: 6em;
+        color: var(--color12);
+      }
+
+      .error-header {
+        color: var(--color11);
+      }
+
+      a {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        font-size: 1.2rem;
+        color: var(--color13);
+        text-align: center;
+        cursor: pointer;
+        padding: 4px 10px 4px 10px;
+        border-radius: 30px;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        transition: 0.6s ease-in-out;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--color16);
+          border-top: 2px solid var(--color12);
+          border-bottom: 2px solid var(--color12);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .LightMode,
+  .DarkMode {
+    .contents-wrapper {
+      .no-match-wrapper {
+        .image-header {
+          font-size: 3rem;
+        }
+
+        .error-header {
+          font-size: 1.2rem;
+        }
+
+        a {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .LightMode,
+  .DarkMode {
+    .contents-wrapper {
+      .no-match-wrapper {
+        .image-header {
+          font-size: 1.2rem;
+        }
+
+        .error-header {
+          font-size: 0.8rem;
+        }
+
+        a {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}

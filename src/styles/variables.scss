@@ -1,0 +1,372 @@
+:root {
+    // --------------------------------
+    // Light Theme
+    // --------------------------------
+    --color01: rgba(242, 241, 249, 1);
+    --color02: rgba(32, 39, 49, 1);
+    --color03: rgba(8, 217, 210, 1);
+    --color04: rgba(0, 150, 204, 1);
+    --color05: rgba(220, 48, 0, 1);
+    --color06: rgba(4, 24, 40, 1);
+
+    --color01rgt: rgba(8, 217, 210, 0.85);
+    --color02rgt: rgba(0, 150, 204, 0.8);
+    --color03rgt: rgba(32, 39, 49, 0.8);
+
+    --managerGradient01: rgba(32, 39, 49, 1);
+    --managerGradient02: rgba(4, 24, 40, 1);
+
+    // --------------------------------
+    // Dark Theme
+    // --------------------------------
+    --color11: rgba(218, 220, 226, 1);
+    --color12: rgba(200, 20, 214, 1);
+    --color13: rgba(128, 0, 200, 1);
+    --color14: rgba(55, 0, 87, 1);
+    --color15: rgba(30, 0, 48, 1);
+    --color16: rgba(0, 150, 204, 1);
+
+    // --------------------------------
+    // Shadows/Glows
+    // --------------------------------
+    --blackShadowInset: rgba(0, 0, 0, 0.6);
+
+    // Button Glows
+    --greenGlow: rgba(0, 220, 8, 0.75);
+    --yellowGlow: rgba(255, 216, 0, 0.75);
+    --redGlow: rgba(224, 34, 50, 0.75);
+
+    // Dark Theme Glows
+    --purpleGlow: rgba(184, 0, 204, 0.85);
+    --blueGlow: rgba(46, 110, 230, 0.75);
+
+    // Light Theme Glows
+    --lightBlueGlow: rgba(0, 150, 204, 0.9);
+
+    // --------------------------------
+    // Shared Variables
+    // --------------------------------
+    --green: rgba(0, 220, 8, 1);
+    --green01: rgba(201, 255, 203, 0.85);
+    --green02: rgba(0, 220, 8, 0.8);
+    --yellow: rgba(255, 216, 0, 1);
+    --yellow01: rgba(255, 248, 206, 0.85);
+    --yellow02: rgba(255, 216, 0, 0.8);
+    --red: rgba(224, 34, 50, 1);
+    --red01: rgba(255, 152, 161, 0.85);
+    --red02: rgba(224, 34, 50, 0.8);
+    --commonColor01: rgba(242, 241, 249, 1);
+    --commonColor02: rgba(4, 160, 244, 1);
+    --portraitSupport: rgba(242, 241, 249, 1);
+
+    --sliderbuttoncolor1: rgba(242, 241, 249, 0.6);
+    --sliderbuttoncolor2: rgba(142, 141, 149, 0.75);
+    --sliderbuttoncolor3: rgba(42, 41, 49, 0.9);
+}
+
+@mixin flex-config($justify-content: false, $flex-direction: false) {
+    display: flex;
+  
+    @if $justify-content != false {
+      justify-content: $justify-content;
+    }
+  
+    @if $flex-direction != false {
+      flex-direction: $flex-direction;
+    }
+}
+
+@keyframes darkmodeButtonShadower {
+    0% {
+        box-shadow: 0px 0px 2px 2px var(--greenGlow);
+    }
+    12% {
+        box-shadow: 0px 0px 4px 3px var(--greenGlow);
+    }
+    24% {
+        box-shadow: 0px 0px 6px 2px var(--greenGlow);
+    }
+    36% {
+        box-shadow: 0px 0px 8px 3px var(--greenGlow);
+    }
+    50% {
+        box-shadow: 0px 0px 10px 4px var(--greenGlow);
+    }
+    64% {
+        box-shadow: 0px 0px 8px 3px var(--greenGlow);
+    }
+    76% {
+        box-shadow: 0px 0px 6px 2px var(--greenGlow);
+    }
+    88% {
+        box-shadow: 0px 0px 4px 3px var(--greenGlow);
+    }
+    100% {
+        box-shadow: 0px 0px 2px 2px var(--greenGlow);
+    }
+}
+
+@keyframes darkmodeIconShadower {
+    0% {
+        box-shadow: 0px 0px 2px 2px var(--purpleGlow);
+    }
+    12% {
+        box-shadow: 0px 0px 4px 3px var(--purpleGlow);
+    }
+    24% {
+        box-shadow: 0px 0px 6px 2px var(--purpleGlow);
+    }
+    36% {
+        box-shadow: 0px 0px 8px 3px var(--purpleGlow);
+    }
+    50% {
+        box-shadow: 0px 0px 10px 4px var(--purpleGlow);
+    }
+    64% {
+        box-shadow: 0px 0px 8px 3px var(--purpleGlow);
+    }
+    76% {
+        box-shadow: 0px 0px 6px 2px var(--purpleGlow);
+    }
+    88% {
+        box-shadow: 0px 0px 4px 3px var(--purpleGlow);
+    }
+    100% {
+        box-shadow: 0px 0px 2px 2px var(--purpleGlow);
+    }
+}
+
+@keyframes lightmodeButtonShadower {
+    0% {
+        box-shadow: 0px 0px 2px 2px var(--lightBlueGlow);
+    }
+    12% {
+        box-shadow: 0px 0px 4px 3px var(--lightBlueGlow);
+    }
+    24% {
+        box-shadow: 0px 0px 6px 2px var(--lightBlueGlow);
+    }
+    36% {
+        box-shadow: 0px 0px 8px 3px var(--lightBlueGlow);
+    }
+    50% {
+        box-shadow: 0px 0px 10px 4px var(--lightBlueGlow);
+    }
+    64% {
+        box-shadow: 0px 0px 8px 3px var(--lightBlueGlow);
+    }
+    76% {
+        box-shadow: 0px 0px 6px 2px var(--lightBlueGlow);
+    }
+    88% {
+        box-shadow: 0px 0px 4px 3px var(--lightBlueGlow);
+    }
+    100% {
+        box-shadow: 0px 0px 2px 2px var(--lightBlueGlow);
+    }
+}
+
+@mixin section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(76deg, var(--color01) 84%, var(--color02) 99.5%);
+    border: 3px solid var(--color02);
+    border-radius: 20px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 0px 8px 3px var(--lightBlueGlow);
+}
+
+@mixin darksection {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(315deg, var(--color13), var(--color14) 50%, var(--color14), var(--color14), var(--color14), var(--color15), var(--color15));
+    border: 3px solid var(--color15);
+    border-radius: 20px;
+    padding: 20px 10px 20px 10px;
+    box-shadow: 0px 0px 10px 6px var(--color13);
+}
+
+@mixin section-header {
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--color02);
+    border-radius: 10px;
+    font-size: 1.8rem;
+    margin: 4px 0px 8px 0px;
+    width: 100%;
+}
+
+@mixin dark-section-header {
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--color11);
+    border-radius: 10px;
+    font-size: 1.8rem;
+    margin: 4px 0px 8px 0px;
+}
+
+@mixin modifyPointer {
+    user-select: none;
+}
+
+@mixin bubble-link-lightmode {
+    color: var(--color02);
+    border-radius: 50%;
+    padding: 4px 8px 4px 8px;
+    transition: 0.6s ease-in-out;
+}
+
+@mixin bubble-link-hover-lightmode {
+    background: radial-gradient(var(--color01rgt), var(--color02rgt));
+    animation: lightmodeButtonShadower 8s ease-in-out infinite;
+}
+
+@mixin bubble-link-darkmode {
+    color: var(--color11);
+    border-radius: 50%;
+    padding: 4px 8px 4px 8px;
+    transition: 0.6s ease-in-out;
+}
+
+@mixin bubble-link-hover-darkmode {
+    background: radial-gradient(var(--green01), var(--green));
+    animation: darkmodeButtonShadower 8s ease-in-out infinite;
+}
+
+@mixin small-off-width-borders-transparent {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+
+@mixin small-off-width-borders-lightmode-hover {
+    border-top: 2px solid var(--color02);
+    border-bottom: 2px solid var(--color02);
+    border-right: 1px solid var(--color02);
+    border-left: 1px solid var(--color02);
+}
+
+@mixin small-off-width-borders-darkmode-hover {
+    border-top: 2px solid var(--color02);
+    border-bottom: 2px solid var(--color02);
+    border-right: 1px solid var(--color02);
+    border-left: 1px solid var(--color02);
+}
+
+@mixin lightmode-slider-btn {
+    @include flex-config($justify-content: space-between, $flex-direction: row);
+    user-select: none;  
+    align-items: center;
+    cursor: pointer;
+    font-size: 4.8rem;
+    padding: 8px;
+    min-height: 200px;
+    background: radial-gradient(var(--sliderbuttoncolor1) 10%, var(--sliderbuttoncolor2) 50%, var(--sliderbuttoncolor3));
+    transition: 0.8s ease-in-out;
+    padding-bottom: 2%;
+}
+
+@mixin lightmode-slider-btn-hover {
+    user-select: none;
+    color: var(--color02);
+    background: radial-gradient(var(--color01rgt), var(--color02rgt));
+    animation: lightmodeButtonShadower 8s ease-in-out infinite;
+}
+  
+@mixin lightmode-left-slider-btn {
+    user-select: none;
+    border-top: 2px solid var(--color01);
+    border-bottom: 2px solid var(--color01);
+    border-right: 3px solid var(--color01);
+    border-left: 2px solid var(--color01);
+    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: var(--color01);
+
+    &:hover {
+        border-top: 2px solid var(--color02);
+        border-bottom: 2px solid var(--color02);
+        border-right: 3px solid var(--color02);
+        border-left: 2px solid var(--color02);
+    }
+}
+
+@mixin lightmode-right-slider-btn {
+    user-select: none;
+    border-top: 2px solid var(--color01);
+    border-bottom: 2px solid var(--color01);
+    border-right: 3px solid var(--color01);
+    border-left: 2px solid var(--color01);
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: var(--color01);
+
+    &:hover {
+        border-top: 2px solid var(--color02);
+        border-bottom: 2px solid var(--color02);
+        border-right: 3px solid var(--color02);
+        border-left: 2px solid var(--color02);
+    }
+}
+
+@mixin darkmode-slider-btn {
+    @include flex-config($justify-content: space-between, $flex-direction: row);
+    user-select: none;  
+    align-items: center;
+    cursor: pointer;
+    font-size: 4.8rem;
+    padding: 8px;
+    min-height: 200px;
+    color: var(--color05);
+    background: radial-gradient(var(--sliderbuttoncolor1) 10%, var(--sliderbuttoncolor2) 50%, var(--sliderbuttoncolor3));
+    transition: 0.8s ease-in-out;
+    padding-bottom: 2%;
+}
+
+@mixin darkmode-slider-btn-hover {
+    user-select: none;
+    color: var(--color02);
+    background: radial-gradient(var(--green01), var(--green));
+    animation: darkmodeButtonShadower 8s ease-in-out infinite;
+}
+  
+@mixin darkmode-left-slider-btn {
+    user-select: none;
+    border-top: 2px solid var(--color01);
+    border-bottom: 2px solid var(--color01);
+    border-right: 3px solid var(--color01);
+    border-left: 2px solid var(--color01);
+    border-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: var(--color01);
+
+    &:hover {
+        border-top: 2px solid var(--color02);
+        border-bottom: 2px solid var(--color02);
+        border-right: 3px solid var(--color02);
+        border-left: 2px solid var(--color02);
+    }
+}
+
+@mixin darkmode-right-slider-btn {
+    user-select: none;
+    border-top: 2px solid var(--color01);
+    border-bottom: 2px solid var(--color01);
+    border-right: 3px solid var(--color01);
+    border-left: 2px solid var(--color01);
+    border-radius: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: var(--color01);
+
+    &:hover {
+        border-top: 2px solid var(--color02);
+        border-bottom: 2px solid var(--color02);
+        border-right: 3px solid var(--color02);
+        border-left: 2px solid var(--color02);
+    }
+}

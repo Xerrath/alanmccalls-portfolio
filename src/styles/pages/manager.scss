@@ -1,0 +1,157 @@
+// --------------------------------
+// Dark Theme
+// --------------------------------
+
+.DarkMode {
+    .manager-container-wrapper {
+        @include flex-config($flex-direction: column, $justify-content: center);
+        align-items: center;
+        transition: 0.8s ease-in-out;
+
+        .manager-navbar {
+            @include flex-config($flex-direction: row, $justify-content: space-between);
+            align-items: center;
+            width: 94%;
+            border-radius: 12px;
+            border-bottom: 2px solid var(--color16);
+            border-top: 2px solid var(--color16);
+            border-right: 1px solid var(--color16);
+            border-left: 1px solid var(--color16);
+            padding: 10px 20px 10px 20px;
+            margin: 0px 0px 20px 0px;
+            box-shadow: 0px 0px 10px 4px var(--blueGlow);
+            background: linear-gradient(5deg, var(--managerGradient01) 20%, var(--managerGradient02) 80%);
+            user-select: none;
+            cursor: pointer;
+
+            .manager-link {
+                color: var(--color11);
+                cursor: pointer;
+                border-bottom: 2px solid transparent;
+                border-top: 2px solid transparent;
+                border-right: 1px solid transparent;
+                border-left: 1px solid transparent;
+                transition: 0.4s ease-in-out;
+                border-radius: 16px;
+                padding: 4px 10px 4px 10px;
+                user-select: none;
+
+                &:hover {
+                    border-bottom: 2px solid var(--color12);
+                    border-top: 2px solid var(--color12);
+                    color: var(--color16);
+                }
+            }
+        }
+
+        .render-manager-element {
+            width: 94%;
+            border-radius: 12px;
+            border-bottom: 2px solid var(--color16);
+            border-top: 2px solid var(--color16);
+            border-right: 1px solid var(--color16);
+            border-left: 1px solid var(--color16);
+            padding: 10px 20px 10px 20px;
+            margin: 0px 0px 20px 0px;
+            box-shadow: 0px 0px 10px 4px var(--blueGlow);
+            background: linear-gradient(5deg, var(--managerGradient01) 20%, var(--managerGradient02) 80%);
+            transition: 0.8s ease-in-out;
+
+            .manager-element {
+                color: var(--color11);
+                transition: 0.8s ease-in-out;
+                @include flex-config($flex-direction: column);
+                align-items: center;
+                text-align: center;
+                min-height: 66vh;
+
+                .blog-manager-form {
+                    @include flex-config($flex-direction: column);
+
+                    .dropzone-wrapper {
+                        @include flex-config($flex-direction: row, $justify-content: space-evenly);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// --------------------------------
+// Light Theme
+// --------------------------------
+
+.LightMode {
+    .manager-container-wrapper {
+        @include flex-config($flex-direction: column, $justify-content: center);
+        align-items: center;
+        transition: 0.8s ease-in-out;
+
+        .manager-navbar {
+            @include flex-config($flex-direction: row, $justify-content: space-between);
+            align-items: center;
+            width: 94%;
+            border-radius: 12px;
+            border-bottom: 2px solid var(--color04);
+            border-top: 2px solid var(--color04);
+            border-right: 1px solid var(--color04);
+            border-left: 1px solid var(--color04);
+            padding: 10px 20px 10px 20px;
+            margin: 0px 0px 20px 0px;
+            box-shadow: 0px 0px 10px 4px var(--lightBlueGlow);
+            background: linear-gradient(5deg, var(--managerGradient01) 20%, var(--managerGradient02) 80%);
+            cursor: pointer;
+            user-select: none;
+
+            .manager-link {
+                color: var(--color01);
+                cursor: pointer;
+                user-select: none;
+                border-bottom: 2px solid transparent;
+                border-top: 2px solid transparent;
+                border-right: 1px solid transparent;
+                border-left: 1px solid transparent;
+                transition: 0.4s ease-in-out;
+                border-radius: 16px;
+                padding: 4px 10px 4px 10px;
+
+                &:hover {
+                    border-bottom: 2px solid var(--color04);
+                    border-top: 2px solid var(--color04);
+                    color: var(--color05);
+                }
+            }
+        }
+
+        .render-manager-element {
+            width: 94%;
+            border-radius: 12px;
+            border-bottom: 2px solid var(--color04);
+            border-top: 2px solid var(--color04);
+            border-right: 1px solid var(--color04);
+            border-left: 1px solid var(--color04);
+            padding: 10px 20px 10px 20px;
+            margin: 0px 0px 20px 0px;
+            box-shadow: 0px 0px 10px 4px var(--lightBlueGlow);
+            background: linear-gradient(5deg, var(--managerGradient01) 20%, var(--managerGradient02) 80%);
+            transition: 0.8s ease-in-out;
+
+            .manager-element {
+                color: var(--color01);
+                transition: 0.8s ease-in-out;
+                @include flex-config($flex-direction: column);
+                align-items: center;
+                text-align: center;
+                min-height: 66vh;
+
+                .blog-manager-form {
+                    @include flex-config($flex-direction: column);
+
+                    .dropzone-wrapper {
+                        @include flex-config($flex-direction: row, $justify-content: space-evenly);
+                    }
+                }
+            }
+        }
+    }
+}

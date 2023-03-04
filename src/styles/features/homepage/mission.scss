@@ -1,0 +1,81 @@
+// --------------------------------
+// LightMode
+// --------------------------------
+.LightMode {
+  .mission {
+    @include flex-config($flex-direction: column);
+    @include section;
+    color: var(--color02);
+
+    h1 {
+      @include section-header;
+      color: var(--color02);
+    }
+
+    .feature-contents {
+      @include flex-config(
+        $justify-content: space-evenly,
+        $flex-direction: column
+      );
+
+      p {
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--color02);
+      }
+      transition: 0.8s ease-in-out;
+    }
+    transition: 0.8s ease-in-out;
+  }
+  transition: 0.8s ease-in-out;
+}
+
+// --------------------------------
+// DarkMode
+// --------------------------------
+
+.DarkMode {
+  .mission {
+    @include flex-config($flex-direction: column);
+    @include darksection;
+    color: var(--color11);
+
+    h1 {
+      @include dark-section-header;
+      color: var(--color11);
+    }
+
+    .feature-contents {
+      @include flex-config(
+        $justify-content: space-evenly,
+        $flex-direction: column
+      );
+
+      p {
+        text-align: center;
+        font-size: 1.4rem;
+        color: var(--color11);
+      }
+      transition: 0.8s ease-in-out;
+    }
+    transition: 0.8s ease-in-out;
+  }
+  transition: 0.8s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .DarkMode,
+  .LightMode {
+    .mission {
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .feature-contents {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

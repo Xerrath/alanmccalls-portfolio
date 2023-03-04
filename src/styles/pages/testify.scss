@@ -1,0 +1,273 @@
+// --------------------------------
+// LightMode Settings
+// --------------------------------
+
+.LightMode {
+  .testify-form {
+    @include flex-config(
+      $justify-content: space-evenly,
+      $flex-direction: column
+    );
+    align-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    padding: 4px;
+    max-height: 78vh;
+    min-height: 74vh;
+
+    textarea {
+      width: 90%;
+      border: 1px solid var(--color02);
+      border-radius: 10px;
+      padding: 6px;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.4rem;
+      color: var(--color02);
+      resize: vertical;
+      min-height: 240px;
+      max-height: 360px;
+      border-top: 4px solid var(--color02);
+      border-bottom: 4px solid var(--color02);
+      border-right: 2px solid var(--color02);
+      border-left: 2px solid var(--color02);
+      box-shadow: 0px 0px 10px 6px var(--color02);
+    }
+
+    .good-characters {
+      width: 90%;
+      text-align: center;
+      transition: 0.4s ease-in-out;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-radius: 20px;
+      padding: 4px 20px 4px 20px;
+      margin: 10px 0px;
+    }
+
+    .bad-characters {
+      border-right: 1px solid var(--red);
+      border-left: 1px solid var(--red);
+      border-top: 2px solid var(--red);
+      border-bottom: 2px solid var(--red);
+      border-radius: 20px;
+      padding: 4px 20px 4px 20px;
+      transition: 0.4s ease-in-out;
+      margin: 10px 0px;
+    }
+
+    .testify-error {
+      text-align: center;
+      color: var(--red);
+      border-right: 1px solid var(--red);
+      border-left: 1px solid var(--red);
+      border-top: 2px solid var(--red);
+      border-bottom: 2px solid var(--red);
+      border-radius: 20px;
+      transition: 0.4s ease-in-out;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1rem;
+      padding: 4px 20px 4px 20px;
+      background-color: transparent;
+      margin: 0px 0px 20px 0px;
+      width: 90%;
+      transition: 0.4s ease-in-out;
+      margin: 10px 0px;
+    }
+
+    .testify-btn {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--color02);
+      cursor: pointer;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-radius: 20px;
+      transition: 0.4s ease-in-out;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1rem;
+      padding: 4px 20px 4px 20px;
+      background-color: transparent;
+      margin: 0px 0px 20px 0px;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        border-top: 2px solid var(--color05);
+        border-bottom: 2px solid var(--color05);
+        color: var(--color04);
+      }
+    }
+
+    .errorMessage {
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px 4px;
+      color: var(--color05);
+    }
+  }
+}
+
+// --------------------------------
+// DarkMode Settings
+// --------------------------------
+
+.DarkMode {
+  .testify-form {
+    @include flex-config(
+      $justify-content: space-evenly,
+      $flex-direction: column
+    );
+    align-content: center;
+    align-items: center;
+    transition: 0.4s ease-in-out;
+    padding: 4px;
+    max-height: 78vh;
+    min-height: 74vh;
+
+    textarea {
+      margin-top: 20px;
+      width: 90%;
+      border: 1px solid var(--color16);
+      border-radius: 10px;
+      padding: 6px;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1.4rem;
+      color: var(--color15);
+      resize: vertical;
+      min-height: 240px;
+      max-height: 360px;
+      border-top: 4px solid var(--color15);
+      border-bottom: 4px solid var(--color15);
+      border-right: 2px solid var(--color15);
+      border-left: 2px solid var(--color15);
+      box-shadow: 0px 0px 10px 6px var(--color16);
+      background-color: var(--color11);
+    }
+
+    .good-characters {
+      width: 90%;
+      text-align: center;
+      transition: 0.4s ease-in-out;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-radius: 20px;
+      padding: 4px 20px 4px 20px;
+      margin: 10px 0px;
+      color: var(--color11);
+    }
+
+    .bad-characters {
+      border-right: 1px solid var(--color12);
+      border-left: 1px solid var(--color12);
+      border-top: 2px solid var(--color12);
+      border-bottom: 2px solid var(--color12);
+      border-radius: 20px;
+      padding: 4px 20px 4px 20px;
+      transition: 0.4s ease-in-out;
+      color: var(--color12);
+    }
+
+    .testify-error {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--color12);
+      border-right: 1px solid var(--color12);
+      border-left: 1px solid var(--color12);
+      border-top: 2px solid var(--color12);
+      border-bottom: 2px solid var(--color12);
+      border-radius: 20px;
+      transition: 0.4s ease-in-out;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1rem;
+      padding: 4px 20px 4px 20px;
+      background-color: transparent;
+      margin: 0px 0px 20px 0px;
+      width: 90%;
+      transition: 0.4s ease-in-out;
+    }
+
+    .testify-btn {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--color11);
+      cursor: pointer;
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-radius: 20px;
+      transition: 0.4s ease-in-out;
+      font-family: tachyon, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 1rem;
+      padding: 4px 20px 4px 20px;
+      background-color: transparent;
+      margin: 0px 0px 20px 0px;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        border-top: 2px solid var(--color12);
+        border-bottom: 2px solid var(--color12);
+        color: var(--color16);
+      }
+    }
+
+    .errorMessage {
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px 4px;
+      color: var(--color16);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .LightMode,
+  .DarkMode {
+    .testify-form {
+      textarea {
+        font-size: 1rem;
+      }
+
+      .good-characters {
+        font-size: 0.8rem;
+      }
+
+      .bad-characters {
+        font-size: 0.8rem;
+      }
+
+      .testify-error {
+        font-size: 0.7rem;
+      }
+
+      .testify-btn {
+        font-size: 0.8rem;
+      }
+
+      .errorMessage {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}

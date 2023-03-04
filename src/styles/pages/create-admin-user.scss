@@ -1,0 +1,190 @@
+// --------------------------------
+// Light Mode
+// --------------------------------
+
+.LightMode {
+  .page-elements-wrapper {
+    .create-admin-wrapper {
+      @include flex-config(
+        $flex-direction: row,
+        $justify-content: space-between
+      );
+      align-items: center;
+      min-height: 78vh;
+
+      .creater-wrapper {
+        margin-left: 10px;
+        @include flex-config($flex-direction: column, $justify-content: center);
+        align-items: center;
+        padding: 4px;
+        min-width: 30%;
+        text-align: center;
+
+        form {
+          @include flex-config($flex-direction: column);
+        }
+
+        input {
+          border-right: 1px solid var(--color02);
+          border-left: 1px solid var(--color02);
+          border-top: 2px solid var(--color02);
+          border-bottom: 2px solid var(--color02);
+          border-radius: 10px;
+          padding: 6px;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          color: var(--color02);
+          margin-top: 10px;
+          margin-bottom: 10px;
+          text-align: left;
+          box-shadow: 0px 0px 6px 2px var(--color02);
+        }
+
+        .confirm-btn {
+          text-align: center;
+          font-size: 0.9rem;
+          color: var(--color02);
+          cursor: pointer;
+          padding: 2px;
+          border-right: 1px solid transparent;
+          border-left: 1px solid transparent;
+          border-top: 2px solid transparent;
+          border-bottom: 2px solid transparent;
+          border-radius: 20px;
+          transition: 0.4s ease-in-out;
+          font-family: tachyon, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          font-size: 1rem;
+          padding: 4px 10px 4px 10px;
+          background-color: transparent;
+          margin: 20px 0px 0px 0px;
+
+          &:hover {
+            color: var(--color05);
+            border-top: 2px solid var(--color04);
+            border-bottom: 2px solid var(--color04);
+          }
+        }
+
+        .errorMessage {
+          margin-top: 20px;
+          color: var(--color05);
+        }
+      }
+
+      .image-wrapper {
+        min-width: 60%;
+        margin: 0px 10px 0px 10px;
+        border-right: 1px solid var(--color02);
+        border-left: 1px solid var(--color02);
+        border-top: 2px solid var(--color02);
+        border-bottom: 2px solid var(--color02);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px 6px var(--color02);
+
+        .image {
+          width: 100%;
+          height: 400px;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------
+// Dark Mode
+// --------------------------------
+
+.DarkMode {
+    .page-elements-wrapper {
+      .create-admin-wrapper {
+        @include flex-config(
+          $flex-direction: row,
+          $justify-content: space-between
+        );
+        align-items: center;
+        min-height: 78vh;
+  
+        .creater-wrapper {
+          margin-left: 10px;
+          @include flex-config($flex-direction: column, $justify-content: center);
+          align-items: center;
+          padding: 4px;
+          min-width: 30%;
+          text-align: center;
+  
+          input {
+            border-right: 1px solid var(--color16);
+            border-left: 1px solid var(--color16);
+            border-top: 2px solid var(--color16);
+            border-bottom: 2px solid var(--color16);
+            border-radius: 10px;
+            padding: 6px;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: var(--color02);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            box-shadow: 0px 0px 6px 2px var(--color02);
+            background-color: var(--color11);
+          }
+  
+          .confirm-btn {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--color11);
+            cursor: pointer;
+            padding: 2px;
+            border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-radius: 20px;
+            transition: 0.4s ease-in-out;
+            font-family: tachyon, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            padding: 4px 10px 4px 10px;
+            background-color: transparent;
+            margin: 20px 0px 0px 0px;
+  
+            &:hover {
+              color: var(--color16);
+              border-top: 2px solid var(--color12);
+              border-bottom: 2px solid var(--color12);
+            }
+          }
+
+          .errorMessage {
+            margin-top: 20px;
+            color: var(--color16);
+          }
+        }
+  
+        .image-wrapper {
+          min-width: 60%;
+          margin: 0px 10px 0px 10px;
+          border-right: 1px solid var(--color15);
+          border-left: 1px solid var(--color15);
+          border-top: 2px solid var(--color15);
+          border-bottom: 2px solid var(--color15);
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0px 0px 10px 6px var(--blueGlow);
+  
+          .image {
+            width: 100%;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }

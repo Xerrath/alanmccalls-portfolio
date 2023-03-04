@@ -115,8 +115,13 @@ const Navbar = () => {
             </div>
             </NavLink>
           ) : (null)}
-
-            <div className="resume-loader">- Resume -</div>
+            
+            <a href="https://docs.google.com/document/d/1daCxJ6dtRtx1JZ8Y7qw95MgPuJ-yB36J/edit?usp=sharing&ouid=104423727445222038479&rtpof=true&sd=true"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="resume-loader">- Resume -</div>
+            </a>
 
             <div className="switch-wrapper">
               <div className="switch-title">Light Mode</div>

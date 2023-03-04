@@ -27,7 +27,7 @@ export default function AppWrapper({children}) {
     // --------------------------------
     
     // const directory = `http://127.0.0.1:5000`;
-    const directory = `https://alans-custom-backend.herokuapp.com`;
+    const directory = `https://alans-custom-backend.herokuapp.com/`;
 
     // --------------------------------
     // custom functions

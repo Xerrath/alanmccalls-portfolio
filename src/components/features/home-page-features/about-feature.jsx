@@ -21,7 +21,7 @@ const AboutFeature = () => {
                     <p>
                         I'm a full-stack software developer in Glendale, AZ.
                         A highly, passionate individual who works well with others to accomplish goals.
-                        I enjoy learning new ideas, trying to solve them, and working with piers to accomplish the "bigger picture."
+                        I enjoy learning new ideas, trying to solve them, and working with peers to accomplish the "bigger picture."
                     </p>
                     <p>
                         Being a US Army Veteran I have learned to be part of a team and to be just as efficient on my own.

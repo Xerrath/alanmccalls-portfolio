@@ -68,7 +68,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    port: 3000,
+    port: process.env.PORT || 3000,
     open: true,
   },
   plugins: [

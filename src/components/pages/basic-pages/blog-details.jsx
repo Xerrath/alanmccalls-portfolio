@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams, useNavigate } from "react-router-dom";
 import { Buffer } from "buffer";
 import parse from "html-react-parser";
 import he from "he";
@@ -7,6 +7,7 @@ import he from "he";
 import { useAppContext } from "../../../context.js";
 
 const BlogDetails = () => {
+  const navigate = useNavigate();
   const { directory } = useAppContext();
   const { blogId } = useParams("");
   const [blog, setBlog] = useState([]);

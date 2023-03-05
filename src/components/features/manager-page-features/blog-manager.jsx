@@ -469,9 +469,10 @@ const BlogManager = () => {
                 init={{
                   height: 400,
                   menubar: true,
-                  plugins: ["code"],
+                  plugins: ["code | link"],
+                  link_default_target: '_blank',
                   toolbar:
-                    "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | code",
+                    "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | code | link | openlink | unlink",
                   content_style:
                     "body {     font-family: tachyon, sans-serif; font-weight: 400; font-style: normal; }",
                 }}

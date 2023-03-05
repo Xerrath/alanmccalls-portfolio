@@ -38,6 +38,7 @@
         $flex-direction: column-reverse
       );
       align-items: center;
+      max-width: 96%;
 
       .version-one {
         min-height: 260px;
@@ -46,7 +47,8 @@
         .blog-header {
           text-align: right;
           border-bottom-right-radius: 10px;
-          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
         }
 
         .img-link-wrapper {
@@ -55,6 +57,7 @@
           border-bottom-right-radius: 10px;
           min-height: 240px;
           max-height: 240px;
+          max-width: 100%;
           @include flex-config(
             $justify-content: space-between,
             $flex-direction: column
@@ -79,7 +82,8 @@
         .blog-header {
           text-align: left;
           border-bottom-left-radius: 10px;
-          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
         }
 
         .img-link-wrapper {
@@ -88,6 +92,7 @@
           border-bottom-left-radius: 10px;
           min-height: 240px;
           max-height: 240px;
+          max-width: 100%;
           @include flex-config(
             $justify-content: space-between,
             $flex-direction: column
@@ -137,7 +142,7 @@
             margin-right: 8px;
             margin-top: 32px;
             margin-bottom: 20px;
-            width: 30%;
+            max-width: 30%;
             align-items: center;
             min-height: 240px;
             max-height: 240px;
@@ -181,7 +186,8 @@
 
               img {
                 margin: 10px;
-                height: 140px;
+                max-height: 140px;
+                max-width: 100%;
                 border-radius: 20px;
                 overflow: hidden;
                 border-right: 1px solid var(--color04);
@@ -196,7 +202,7 @@
             @include flex-config($flex-direction: column);
             margin-left: 8px;
             margin-right: 8px;
-            width: 70%;
+            max-width: 70%;
             align-items: center;
 
             .blog-header {
@@ -205,6 +211,8 @@
               font-size: 1.4rem;
               border-bottom: 2px solid var(--color05);
               color: var(--color04);
+              min-width: 100%;
+              max-width: 100%;
             }
 
             .blog-summary {
@@ -214,6 +222,7 @@
               color: var(--color01);
               min-height: 140px;
               max-height: 160px;
+              max-width: 100%;
               overflow: hidden;
             }
           }
@@ -261,6 +270,7 @@
         $flex-direction: column-reverse
       );
       align-items: center;
+      max-width: 96%;
 
       .version-one {
         min-height: 260px;
@@ -364,7 +374,7 @@
             margin-right: 8px;
             margin-top: 32px;
             margin-bottom: 20px;
-            width: 30%;
+            max-width: 30%;
             min-height: 240px;
             max-height: 240px;
 
@@ -407,7 +417,8 @@
 
               img {
                 margin: 10px;
-                height: 140px;
+                max-height: 140px;
+                max-width: 100%;
                 border-radius: 20px;
                 overflow: hidden;
                 border-right: 1px solid var(--color12);
@@ -440,6 +451,7 @@
               color: var(--color11);
               min-height: 140px;
               max-height: 160px;
+              max-width: 100%;
               overflow: hidden;
             }
           }

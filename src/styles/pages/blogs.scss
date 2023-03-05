@@ -57,7 +57,6 @@
           border-bottom-right-radius: 10px;
           min-height: 240px;
           max-height: 240px;
-          max-width: 100%;
           @include flex-config(
             $justify-content: space-between,
             $flex-direction: column
@@ -92,7 +91,6 @@
           border-bottom-left-radius: 10px;
           min-height: 240px;
           max-height: 240px;
-          max-width: 100%;
           @include flex-config(
             $justify-content: space-between,
             $flex-direction: column
@@ -111,7 +109,7 @@
       }
 
       .blog-wrapper {
-        margin: 10px 10px 10px 10px;
+        margin: 10px;
         padding: 10px;
         background: linear-gradient(
           5deg,
@@ -138,13 +136,12 @@
               $justify-content: space-between,
               $flex-direction: column
             );
+            align-items: center;
             margin-left: 8px;
             margin-right: 8px;
-            margin-top: 32px;
+            margin-top: 30px;
             margin-bottom: 20px;
             max-width: 30%;
-            align-items: center;
-            min-height: 240px;
             max-height: 240px;
 
             .text-link {
@@ -177,9 +174,9 @@
               text-align: center;
               min-height: 40%;
               min-width: 90%;
-              max-width: 99%;
-              margin-top: 4px;
-              margin-bottom: 4px;
+              max-width: 98%;
+              margin: 8px;
+              padding: 4px;
               border-top: 1px solid var(--color05);
               border-bottom: 1px solid var(--color05);
               align-items: center;
@@ -279,7 +276,8 @@
         .blog-header {
           text-align: right;
           border-bottom-right-radius: 10px;
-          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
         }
 
         .img-link-wrapper {
@@ -312,7 +310,8 @@
         .blog-header {
           text-align: left;
           border-bottom-left-radius: 10px;
-          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
         }
 
         .img-link-wrapper {
@@ -339,7 +338,7 @@
       }
 
       .blog-wrapper {
-        margin: 10px 10px 10px 10px;
+        margin: 10px;
         padding: 10px;
         background: linear-gradient(
           75deg,
@@ -372,10 +371,9 @@
             align-items: center;
             margin-left: 8px;
             margin-right: 8px;
-            margin-top: 32px;
+            margin-top: 30px;
             margin-bottom: 20px;
             max-width: 30%;
-            min-height: 240px;
             max-height: 240px;
 
             .text-link {
@@ -408,9 +406,9 @@
               text-align: center;
               min-height: 40%;
               min-width: 90%;
-              max-width: 99%;
-              margin-top: 4px;
-              margin-bottom: 4px;
+              max-width: 98%;
+              margin: 8px;
+              padding: 4px;
               border-top: 1px solid var(--color16);
               border-bottom: 1px solid var(--color16);
               align-items: center;
@@ -433,7 +431,7 @@
             @include flex-config($flex-direction: column);
             margin-left: 8px;
             margin-right: 8px;
-            width: 70%;
+            max-width: 70%;
             align-items: center;
 
             .blog-header {
@@ -442,6 +440,8 @@
               font-size: 1.4rem;
               border-bottom: 2px solid var(--color13);
               color: var(--color12);
+              min-width: 100%;
+              max-width: 100%;
             }
 
             .blog-summary {

@@ -46,9 +46,7 @@ const BlogDetails = () => {
 
     heroImageURL = URL.createObjectURL(heroFile);
 
-    return (
-      <img src={heroImageURL}/>
-    );
+    return <img src={heroImageURL} />;
   };
 
   return (
@@ -58,9 +56,9 @@ const BlogDetails = () => {
       <div className="blog-details-wrapper">
         <div className="blog-details-elements">
           <div className="sub-header">
-            <a href="/blog">
+            <NavLink to="/blog" className="nav-link">
               <div className="go-back"> &#8592; Go Back</div>
-            </a>
+            </NavLink>
             <div className="date-logged">{blog.blog_date}</div>
           </div>
           <div className="img-details-link-wrapper">

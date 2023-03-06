@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate, Link, useLocation } from "react-router-dom";
 
 import { useAppContext } from "../../../context.js";
 import PortraitImage from "../../../static/personal-pictures/portrait/alan-portrait.jpg";
@@ -16,8 +16,17 @@ const Navbar = () => {
     userLoggedIn,
     themeSwitch
   } = useAppContext();
-
+  const location = useLocation();
   const [changeIcon, setChangeIcon] = useState(true);
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   function handleNavbarMinimized() {
       setNavCollapsed(true);
@@ -42,6 +51,15 @@ const Navbar = () => {
     } else {
       setThemeSwitch(false);
     }
+  }
+
+  function homeHash(classID) {
+    navigate(`/#${classID}`);
+  }
+
+  function homeRedirect(classID) {
+    navigate("/");
+    homeHash(classID)
   }
 
   return (
@@ -76,13 +94,13 @@ const Navbar = () => {
           </NavLink>
 
           <div className="home-links">
-              <a href="/#about" className="home-id">About -</a>
-              <a href="/#mission" className="home-id">Mission -</a>
-              <a href="/#projects" className="home-id">Projects -</a>
-              <a href="/#skills" className="home-id">Skills -</a>
-              <a href="/#testimonials" className="home-id">Testimonials -</a>
-              <a href="/#personal-links" className="home-id">Hot Links -</a>
-              <a href="/#contact" className="home-id">Contact -</a>
+              <div className="home-id" onClick={() => homeRedirect('about')}>About -</div>
+              <div className="home-id" onClick={() => homeRedirect('mission')}>Mission -</div>
+              <div className="home-id" onClick={() => homeRedirect('projects')}>Projects -</div>
+              <div className="home-id" onClick={() => homeRedirect('skills')}>Skills -</div>
+              <div className="home-id" onClick={() => homeRedirect('testimonials')}>Testimonials -</div>
+              <div className="home-id" onClick={() => homeRedirect('personal-links')}>Hot Links -</div>
+              <div className="home-id" onClick={() => homeRedirect('contact')}>Contact -</div>
           </div>
 
           <NavLink

@@ -153,9 +153,12 @@ const ProjectsFeature = () => {
 
   useLayoutEffect(() => {
     setWidth(projectsElementsWrapperWidth.current.offsetWidth);
-  }, [navCollapsed, elementsWithin, elementWidth]);
+  });
 
   function moveSliderLeft() {
+    setWidth(projectsElementsWrapperWidth.current.offsetWidth);
+    totalElementsShown = Math.floor(elementWidth / eachProjectElementsWidth);
+
     if (xOffset < 0) {
       setXOffset((xTranslate) => xTranslate + totalElementsShown * eachProjectElementsWidth);
     } else if (xOffset > 0) {
@@ -164,6 +167,9 @@ const ProjectsFeature = () => {
   }
 
   function moveSliderRight() {
+    setWidth(projectsElementsWrapperWidth.current.offsetWidth);
+    totalElementsShown = Math.floor(elementWidth / eachProjectElementsWidth);
+
     if (xOffset > -elementsWithin) {
       setXOffset((xTranslate) => xTranslate - totalElementsShown * eachProjectElementsWidth);
     } else {

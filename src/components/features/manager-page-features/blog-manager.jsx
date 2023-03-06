@@ -68,7 +68,7 @@ const BlogManager = () => {
 
   useLayoutEffect(() => {
     setWidth(contentsWrapperWidth.current.offsetWidth);
-  }, [contentsWrapperWidth]);
+  });
 
   useEffect(() => {
     setError(false);
@@ -111,6 +111,9 @@ const BlogManager = () => {
   ]);
 
   function moveSliderRight() {
+    setWidth(contentsWrapperWidth.current.offsetWidth);
+    let totalElementsShown = Math.floor(elementWidth / 350);
+
     if (xOffset > -elementsWithin) {
       setXOffset((xTranslate) => xTranslate - totalElementsShown * 350);
     } else {
@@ -119,6 +122,9 @@ const BlogManager = () => {
   }
 
   function moveSliderLeft() {
+    setWidth(contentsWrapperWidth.current.offsetWidth);
+    let totalElementsShown = Math.floor(elementWidth / 350);
+    
     if (xOffset < 0) {
       setXOffset((xTranslate) => xTranslate + totalElementsShown * 350);
     } else if (xOffset > 0) {

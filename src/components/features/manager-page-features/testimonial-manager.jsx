@@ -74,6 +74,9 @@ const TestimonialManager = () => {
   };
 
   function moveSliderRight() {
+    setWidth(contentsWrapperWidth.current.offsetWidth);
+    let elementsWithin = (allTestimonials.length - totalElementsShown) * 400;
+
     if (xOffset > -elementsWithin) {
       setXOffset((xTranslate) => xTranslate - totalElementsShown * 400);
     } else {
@@ -82,6 +85,9 @@ const TestimonialManager = () => {
   }
 
   function moveSliderLeft() {
+    setWidth(contentsWrapperWidth.current.offsetWidth);
+    let elementsWithin = (allTestimonials.length - totalElementsShown) * 400;
+
     if (xOffset < 0) {
       setXOffset((xTranslate) => xTranslate + totalElementsShown * 400);
     } else if (xOffset > 0) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate, Link, useLocation } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 
 import { useAppContext } from "../../../context.js";
 import PortraitImage from "../../../static/personal-pictures/portrait/alan-portrait.jpg";
@@ -59,7 +59,7 @@ const Navbar = () => {
 
   function homeRedirect(classID) {
     navigate("/");
-    homeHash(classID)
+    homeHash(classID);
   }
 
   return (
